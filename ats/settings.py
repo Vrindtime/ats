@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
-
+import os
 from environ import Env
 
 env = Env()
@@ -33,10 +33,11 @@ SECRET_KEY = env('SECRET_KEY')
 if ENVIRONMENT=='development':
     DEBUG = True
 else:
-    DEBUG = True
+    DEBUG = False
 
 
-ALLOWED_HOSTS = []
+# ALLOWED_HOSTS = ['localhost','127.0.0.1']
+ALLOWED_HOSTS = ['*'] # to allow all hosts
 
 
 # Application definition
@@ -141,6 +142,9 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
+# Current version does not contain any static files, Hence commented
+# STATIC_DIRS = [os.path.join(BASE_DIR,'static')]
+# STATIC_ROOT= [os.path.join(BASE_DIR,'staticfiles')]
 
 LOGIN_REDIRECT_URL = "/admin_dashboard/"  # Redirect after login, unless a next is specified
 LOGOUT_REDIRECT_URL = "/login/"  # Redirect after logout
