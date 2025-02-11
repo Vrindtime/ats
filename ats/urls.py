@@ -18,6 +18,7 @@ from django.contrib import admin
 from django.urls import path,include
 
 urlpatterns = [
+    # ats root urls
     path('admin/', include('admin_honeypot.urls', namespace='admin_honeypot')),
     path('backend/', admin.site.urls),
     path('', include('home.urls')),
