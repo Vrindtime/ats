@@ -1,0 +1,39 @@
+<!-- personality/templates/personality/test.html -->
+{% extends './base.html' %}
+{% block content %}
+<!--  to clear the cache-->
+<a href="{% url 'clear_cache' %}" class="center center-warning">Clear Cache</a>
+<p>Session Value TEST: {{ test_taker_id }}</p>
+<h1>Personality Test</h1>
+<form method="post">
+    {% csrf_token %}
+
+    <!-- personality/test.html -->
+    {% for question in questions %}
+    <div class="card mb-3">
+        <div class="card-body">
+            <h4 class="card-title">{{ question.text }}</h4>
+            <div class="form-group">
+                {% for choice in question.choice_set.all %}
+                <div class="form-check">
+                    <input class="form-check-input"
+                           type="radio"
+                           name="q{{ question.id }}"
+                           id="c{{ choice.id }}"
+                           value="{{ choice.id }}">
+                    <label class="form-check-label" for="c{{ choice.id }}">
+                        {{ choice.text }}
+                    </label>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        <br>
+    </div>
+    {% endfor %}
+    <br>
+    <div class="center">
+        <button type="submit">Submit Test</button>
+    </div>
+</form>
+{% endblock %}

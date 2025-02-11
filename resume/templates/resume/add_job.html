@@ -1,0 +1,42 @@
+<!-- resume/templates/resume/add_job.html -->
+{% extends "./base.html" %}
+
+{% block title %}Job Posting{% endblock %}
+
+{% block content %}
+<div class="container"><br>
+  <h1>Create New Job Posting</h1>
+  <br>
+  <form method="post">
+    {% csrf_token %}
+    <div class="form-group">
+      {{ form.title.label_tag }} {{ form.title }}
+      <small class="text-muted">E.g., Senior Python Developer</small>
+    </div>
+  
+    <div class="form-group">
+      {{ form.required_skills.label_tag }} {{ form.required_skills }}
+    </div>
+  
+    <!-- add_job.html -->
+    <div class="form-group">
+      {{ form.education_choice.label_tag }}
+      <select name="education_choice" class="form-control">
+        {% for value, label in form.education_choice.field.choices %}
+        <option value="{{ value }}">{{ label }}</option>
+        {% endfor %}
+      </select>
+    </div>
+  
+    <div class="form-group">
+      {{ form.required_experience_years.label_tag }} {{form.required_experience_years }}
+    </div>
+  
+    <div class="form-group form-check">
+      {{ form.is_active }} {{ form.is_active.label_tag }}
+    </div>
+    <br>
+    <button type="submit" class="center center-primary">Create Job</button>
+  </form>
+</div>
+{% endblock %}

@@ -1,0 +1,65 @@
+{% extends './base.html' %}
+{% block title %}Add Aptitude{% endblock title %}
+{% block extra_css %}
+<style>
+    body {
+        place-content: normal;
+        align-items: start;
+        justify-content: center;
+        width: 100%;
+    }
+</style>
+{% endblock extra_css %}
+{% block content %}
+    <h1>Add New Questions</h1>
+    <form action="" method="POST">
+        {% csrf_token %}
+        <!-- Question Text Field -->
+        <div>
+            <label for="id_text">Question Text:</label>
+            {{ question_form.text }}
+        </div>
+        
+        <!-- Category Dropdown -->
+        <div>
+            <label for="id_category">Category:</label>
+            {{ question_form.category }}
+        </div>
+
+        <!-- Choices Section -->
+        <h2>Choices</h2>
+        {{ choice_formset.management_form }}  <!-- Required for formsets -->
+        
+        <div>
+            {% for form in choice_formset %}
+                <div style="display: flex; align-items: center; margin-bottom: 10px;">
+                    
+                    <!-- Hidden ID Field (Needed for Editing) -->
+                    {{ form.id }}  
+                    <div>
+                        {{ form.text.label_tag }} {{ form.text }}
+                        {{ form.is_correct }}
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+
+        <div class="center"><input type="submit" value="Submit"></div>
+    </form>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const radioGroups = document.querySelectorAll('input[type="radio"][name^="choices-"][name$="-is_correct"]');
+            
+            radioGroups.forEach(function(radio) {
+                radio.addEventListener('change', function() {
+                    // Uncheck all other radios in the formset
+                    radioGroups.forEach(r => {
+                        if (r !== this) {
+                            r.checked = false;
+                        }
+                    });
+                });
+            });
+        });
+        </script>
+{% endblock content %}

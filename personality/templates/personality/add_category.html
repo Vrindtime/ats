@@ -1,0 +1,49 @@
+<!-- personality/templates/personality/add_category.html -->
+{% extends './base.html' %}
+
+{% block content %}
+<div class="container mt-4">
+    <h1>Add New Category</h1>
+
+    <!-- Display Messages -->
+    {% if messages %}
+    <div class="mt-3">
+        {% for message in messages %}
+        <div class="alert {% if message.tags == 'error' %}alert-danger{% else %}alert-success{% endif %}">
+            {{ message }}
+        </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+
+    <!-- Category Form -->
+    <form method="post" class="mt-3">
+        {% csrf_token %}
+        
+        <div class="mb-3">
+            <label for="categoryName" class="form-label">Category Name</label>
+            <input type="text" 
+                   class="form-control" 
+                   id="categoryName" 
+                   name="name" 
+                   placeholder="Enter category name (e.g., Openness)" 
+                   required>
+        </div>
+        
+        <button type="submit" class="center center-primary">Add Category</button>
+        <a href="{% url 'personality_dashboard' %}" class="center center-secondary">Cancel</a>
+    </form>
+
+    <!-- List of Existing Categories -->
+    <div class="mt-5">
+        <h3>Existing Categories</h3>
+        <ul class="list-group">
+            {% for category in categories %}
+            <li class="list-group-item">{{ category.name }}</li>
+            {% empty %}
+            <li class="list-group-item">No categories added yet.</li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+{% endblock %}

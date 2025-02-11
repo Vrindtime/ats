@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Result Page</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
+    />
+  </head>
+  <style>
+    header{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .pending{
+      color: rgb(236, 177, 66);
+    }
+    .approved{
+      color: green;
+    }
+    .rejected{
+      color: red;
+    }
+    .flex{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  </style>
+  <body>
+    <br>
+    <main class="container">
+      <header>
+        <div>
+          <h1 style="text-align: start;">Application Result</h1>
+          <p><strong>Reference ID:</strong> {{ test_taker }}</p>
+        </div>
+        
+        <h5>Status: <span class="{{approved}}">{{ approved|title }} Approval</span></h5>
+      </header>
+
+      <hr>
+
+      <!-- Display User Information -->
+      <h3>User Information</h3>
+      <div>
+        <p class="fw-bold"><strong>Name: </strong> {{ parsed_data.parsed.name }}</p>
+        <p class="text-muted"><strong>Email:</strong>  {{ parsed_data.parsed.contact.email }}</p> 
+        <p class="text-muted"><strong>Phone: </strong>  {{ parsed_data.parsed.contact.phone }}</p>
+        <p class="text-muted"><strong>Location: </strong>  {{ parsed_data.parsed.contact.location_city }} , {{ parsed_data.parsed.contact.location_country }} </p>
+      </div>
+      
+      <hr>
+
+      <div class="flex">
+        <h3>Application for <span class="text-primary">{{ job.title }}</span></h3> (Requires {{ job.experience }}+ experience)
+      </div>
+      
+      <span class="badge bg-primary-subtle text-primary"><strong>Applied on: </strong> {{ applied_on|date:"M d, Y" }}</span>
+
+
+      <hr>
+
+      <!-- Display Scores -->
+      <h3>Scores</h3>
+      <ul>
+        <li><strong>Resume Score:</strong> {{ resume_score|floatformat:2 }}%</li>
+        <li><strong>Personality Test Score:</strong> {{ personality_score|floatformat }} points</li>
+        <li><strong>Aptitude Test Score:</strong> {{ aptitude_score }} points</li>
+      </ul>
+      
+      <h4>Overall Score: {{ overall_score|floatformat:2 }}%</h4>
+
+      <hr>
+
+      <p></p>     
+      <p style="text-align: center; color: grey;">Wait at least a week before checking your approval status. Save your ID to check your approval status later.</p>
+
+      <form action="{% url 'home'  %}" style="text-align: center;">
+         <button type="submit">Go Home</button>
+      </form>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,10 @@
+{% extends './base.html' %}
+
+{% block content %}
+<h1>Test Result</h1>
+<p>You scored {{ score }} out of {{ total_questions }}.</p>
+<p>Your percentage score is {{ percentage_score }}%.</p>
+<a href="{% url 'test_page' %}" style="background-color: #4CAF50; color: white; padding: 10px 20px; text-decoration: none;">
+    Retake Test
+</a>
+{% endblock content %}

@@ -1,0 +1,27 @@
+{% extends './base.html' %}
+{% block title %}Aptitude Test{% endblock title %}
+{% block content %}
+<h1>Aptitude Test</h1>
+<form action="{% url 'submit_test' %}" method="POST">
+    {% csrf_token %}
+    {% for question in questions %}
+        <div style="margin-bottom: 20px;">
+            <h3>Q{{ forloop.counter }}: {{ question.text }}</h3>
+            <ul style="list-style-type: none; padding-left: 0;">
+                {% for choice in question.choices.all %}
+                    
+                    <input type="radio" 
+                           name="question_{{ question.id }}" 
+                           value="{{ choice.id }}" 
+                           id="choice_{{ choice.id }}">
+                    <label for="choice_{{ choice.id }}">{{ choice.text }}</label>
+                    
+                {% endfor %}
+            </ul>
+        </div>
+    {% endfor %}
+    <button type="submit" style="background-color: #4CAF50; color: white; padding: 10px 20px; border: none; cursor: pointer;">
+        Submit Test
+    </button>
+</form>
+{% endblock content %}

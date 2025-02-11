@@ -1,0 +1,21 @@
+{% extends './base.html' %}
+
+{% block title %}Aptitude Category{% endblock title %}
+
+{% block content %}
+    <h1>Add Category Form</h1>
+    <form action="" method="POST">
+        {% csrf_token %}
+        {{form.as_p}}
+        <input type="submit" value="Submit">
+    </form>
+    <hr>
+    {% if Categories     %}
+        <h2>Categories</h2>
+        <ul>
+            {% for category in Categories %}
+            <li>{{category.name}}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+{% endblock content %}

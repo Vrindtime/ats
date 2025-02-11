@@ -1,0 +1,28 @@
+<!-- personality/templates/personality/result.html -->
+{% extends './base.html' %}
+{{message}}
+{% block content %}
+<div class="container mt-4">
+    <h1>Your Test Results</h1>
+    <p>Your unique ID: <strong>{{ test_taker_id }}</strong></p>
+    
+    <div class="card mt-4">
+        <div class="card-body">
+            <h3 class="card-title">Scores</h3>
+            <ul>
+                {% for category, score in scores.items %}
+                <li>{{ category }}: {{ score }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+    
+    <div class="mt-4">
+        {% if approved %}
+        <p class="text-success">Congratulations! You are approved.</p>
+        {% else %}
+        <p class="text-danger">Sorry, you are not approved.</p>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

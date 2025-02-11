@@ -1,0 +1,53 @@
+{% extends './base.html' %}
+{% block title %}Personality Dashboard{% endblock title %}
+{% block extra_css %}
+<style>
+    table,tr {
+    width: 80vw;
+    text-align: center;
+    border-collapse: collapse;
+    max-width: 100%;
+  }
+
+  th,
+  td {
+    border: 1px solid white;
+    text-align: center;
+    padding: 1.4% 0%; /* Reduce padding */
+    white-space: nowrap; /* Prevent multi-line actions */
+  }
+
+  .actions {
+    width: 20vw;
+    display: flex;
+    gap: 8px; /* Add spacing between buttons */
+    justify-content: center;
+  }
+
+</style>
+{% endblock extra_css %}
+{% block content %}
+<h1>Personality Questions Dashboard</h1>
+<table>
+    <tr>
+      <th>ID</th>
+      <th>Question</th>
+      <th>Category</th>
+      <th>Actions</th>
+    </tr>
+
+    {% for question in questions %}
+        <tr>
+            <td>{{ question.id }}</td>
+            <td>{{ question.text|truncatechars:20 }}</td>
+            <td>{{ question.category }}</td>
+            <td>
+
+                <a href="{% url 'add_choice' question.id %}">Add Choices</a> &nbsp; | &nbsp;
+                <a href="{% url 'edit_question' question.id %}">Edit</a> &nbsp; | &nbsp;
+                <a href="{% url 'delete_question' question.id %}" class="del">Delete</a>
+            </td>
+        </tr>
+    {% endfor %}
+</table>
+{% endblock %}

@@ -1,0 +1,153 @@
+{% extends "./base.html" %}
+{% block title %}{{ resume.parsed_data.parsed.name }} - Application Review{% endblock %}
+
+{% block extra_css %}
+<style>
+  main {
+    padding: 2% 5%;
+  }
+  .skills{
+    display: flex;
+    column-gap: 5vw;
+    flex-wrap: wrap;
+  }
+  .row{
+    margin-top: 2vh;
+    display: flex;
+    width: 85vw;
+    justify-content: space-between;
+  }
+  .card{
+    display: grid;
+    place-content: center;
+    text-align: center;
+    padding: 5%;
+    background: rgba(53, 65, 89, 0.42);
+    border-radius: 16px;
+    border: 1px solid rgba(19, 23, 31, 0.46);
+    }
+    .card > p,h5,h4{
+      margin-bottom: 0px;
+    }
+  .card:hover{
+    box-shadow: 0 4px 30px rgba(141, 141, 141, 0.1);
+    backdrop-filter: blur(6.1px);
+    -webkit-backdrop-filter: blur(6.1px);
+  }
+  .education-entry{
+    width: 90vw;
+    border: 1px solid white;
+    border-radius: 8px;
+    padding: 0% 2%;
+    margin-bottom: 2vh;
+  }
+  .btn{
+    width: 16vw;
+    height: 5vh;
+    display: grid;
+    place-content: center;
+  }
+  .w-full{
+    width: 90vw;
+    display: grid;
+    place-content: center;
+  }
+</style>
+{% endblock extra_css %}
+
+{% block content %}
+<main>
+  <!-- Header Section -->
+  <section id="profile-head">
+    <h1>{{ resume.parsed_data.parsed.name }}</h1>
+    <p>
+      {{ resume.test_taker_id}} &nbsp;|&nbsp;
+      {{ resume.parsed_data.parsed.contact.email }} &nbsp;| &nbsp; 
+      {{ resume.parsed_data.parsed.contact.phone }} 
+    </p>
+  </section>
+
+  <!-- Application Overview -->
+  <section>
+      <div class="row">
+        <h3>Application for <span>{{ resume.job.title }}</span></h3>
+        <p>{{ resume.job.required_experience_years }}+ years experience required</p>
+    </div>
+    <p>Applied on {{ resume.uploaded_at|date:"M d, Y" }}</p>
+  </section>
+
+      
+      <!-- Score Breakdown -->
+      <section class="score-breakdown grid">
+        <div class="card">
+            <h4>Match Score</h4>
+            <p>{{ resume.score|floatformat:1 }}%</p>
+        </div>
+        <div class="card">
+          <h5>Skills Match</h5>
+          <p>{{ resume.score_breakdown.skills.matched|length }}/{{ resume.job.required_skills|length }} skills</p>
+        </div>
+        <div class="card">
+          <h5>Education</h5>
+          <p>{{ resume.score_breakdown.education.matched|yesno:"Qualified,Not Qualified" }}</p>
+        </div>
+        <div class="card">
+          <h5>Experience</h5>
+          <p>{{ resume.score_breakdown.experience.years }} years</p>
+        </div>
+      </section>
+  
+
+
+  <!-- Professional Experience -->
+  <section>
+    <h3>Professional Experience</h3>
+    {% for job in resume.parsed_data.parsed.employment_history %}
+    <div class="job-entry">
+      <h5>{{ job.title }}</h5>
+      <p>{{ job.company }} • {{ job.start_date|slice:":4" }} – 
+        {% if job.end_date %}{{ job.end_date|slice:":4" }}{% else %}Present{% endif %}</p>
+      <ul>
+        {% for responsibility in job.responsibilities %}
+        <li>{{ responsibility }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% endfor %}
+  </section>
+
+  <!-- Skills -->
+  <section>
+    <h3>Technical Skills</h3>
+    <ol>
+        <div class="skills">
+          {% for skill in resume.parsed_data.parsed.skills %}
+          <li><p>{{ skill }}</p></li>
+          {% endfor %}
+        </div>
+    </ol>
+  </section>
+
+  <!-- Education -->
+  <section>
+    <h3>Education</h3>
+    {% for edu in resume.parsed_data.parsed.education %}
+    <div class="education-entry">
+        <div class="row">
+          <h6>{{ edu.degree }}</h6>
+        {% if edu.end_date %}
+        <p>{{ edu.end_date|slice:":4" }}</p>
+        {% endif %}
+      </div>
+      <p>{{ edu.institution_name }}</p>
+      
+    </div>
+    {% endfor %}
+  </section>
+
+  <!-- make this a approve or reject area -->
+  <div class="w-full">
+    <a href="{% url 'resume_dashboard'  %}" class="btn">Go Back</a> 
+  </div>
+</main>
+{% endblock %}

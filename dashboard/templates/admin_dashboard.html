@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Dashboard</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
+    />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        display: flex;
+        height: 100dvh;
+      }
+      h1,
+      h2 {
+        text-align: center;
+      }
+      a {
+        text-decoration: none;
+        color: black;
+        padding: 1% 2%;
+        background-color: #e5e5e5;
+        border-radius: 6px;
+      }
+      a:hover {
+        color: white;
+      }
+      .sidebar {
+        width: 12vw;
+        min-width: 200px;
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        background: rgba(53, 65, 89, 0.42);
+        border-top-right-radius: 16px;
+        border-bottom-right-radius: 16px;
+        border: 1px solid rgba(19, 23, 31, 0.46);
+      }
+      .sidebar-links {
+        flex-grow: 1;
+      }
+      .sidebar a {
+        display: block;
+        padding: 10px;
+        text-decoration: none;
+        margin-bottom: 10px;
+      }
+      .sidebar a:hover {
+        background-color: #092758;
+      }
+      .logout-btn {
+        background-color: #ff4d4d;
+        color: white;
+        text-align: center;
+        padding: 10px;
+        text-decoration: none;
+      }
+      .main-content {
+        flex-grow: 1;
+        padding: 20px;
+        /* background-color: #f9f9f9; */
+      }
+      table,
+      tr {
+        text-align: center;
+        border-collapse: collapse;
+        max-width: 100%;
+      }
+
+      th,
+      td {
+        border: 1px solid white;
+        text-align: center;
+        padding: 1.4% 0%; /* Reduce padding */
+        white-space: nowrap; /* Prevent multi-line actions */
+      }
+      button.del,a.del {
+        color: white;
+        background-color: rgb(153, 13, 13);
+        border: none;
+      }
+      button.del:hover,a.del:hover {
+        background-color: rgb(185, 20, 20);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="sidebar">
+        <h2>M E N U</h2>
+      <div class="sidebar-links">
+        <a href="{% url 'resume_dashboard'  %}">Resume</a>
+        <a href="{% url 'aptitude_dashboard'  %}">Aptitude</a>
+        <a href="{% url 'personality_dashboard'  %}">Personality</a>
+      </div>
+      <form action="{% url 'logout' %}" method="post" >
+        {% csrf_token %}
+        <button type="submit" class="del">Logout</button>
+    </form>
+    
+    </div>
+    <div class="main-content">
+      <h1>Admin Dashboard</h1>
+      <table>
+        <thead>
+          <tr>
+            <th>UUID</th>
+            <th>Name</th>
+            <th>Resume Score</th>
+            <th>Personality Score</th>
+            <th>Aptitude Score</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Add more rows as needed -->
+           {% for test_taker in test_takers %}
+           <tr>
+            <td>{{ test_taker.id }}</td>
+            <td>{{ test_taker.extracted_name }}</td>
+            <td>{{ test_taker.resume_score|default:0 }}</td> <!-- Ensure correct field -->
+            <td>{{ test_taker.personality_score|default:0 }}</td>
+            <td>{{ test_taker.aptitude_score|default:0 }}</td>
+            <td>
+                <a href="{% url 'resume_detail' resume_id=test_taker.resume_id %}">View</a> &nbsp; | &nbsp;
+                <a href="{% url 'delete_user' id=test_taker.id %}" class="del">Delete</a>
+              </td>
+           </tr>
+           {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>

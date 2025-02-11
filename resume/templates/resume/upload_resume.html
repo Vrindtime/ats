@@ -1,0 +1,67 @@
+<!-- upload_resume.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resume Uplaod Page</title>
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
+>
+    <style>
+      body {
+        display: grid;
+        place-content: center;
+        height: 100dvh;
+      }
+      section {
+        display: grid;
+        place-content: center;
+      }
+      a {
+        text-decoration: none;
+        color: black;
+        padding: 2% 5%;
+        background-color: aqua;
+        border-radius: 24px;
+      }
+      a:hover {
+        color: white;
+      }
+      .center {
+        display: flex;
+        justify-content: center;
+      }
+      h2,h1 {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <p>Session Value: {{ test_taker_id }}</p>
+    <a href="{% url 'clear_cache' %}" class="center center-warning" style="background-color: #c22c2c;">Clear Cache</a>
+
+    <main>
+      <h1>Process 1: Resume Upload</h1>
+      <p>Step 1:Select a Job [Job that you want to apply for]</p>
+      <p>Step 2:Upload your Resume. [You can reupload your resume by clicking Choose File]</p>
+      <p>Step 3:Click the Upload Button to Progress to the Next Step</p>
+      <div class="center">
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <label>Select Job:</label>
+            <select name="job_id">
+              {% for job in active_jobs %}
+              <option value="{{ job.id }}">{{ job.title }}</option>
+              {% endfor %}
+            </select>
+            {{ form.as_p }}
+            <div class="center">
+                <button type="submit">Upload</button>
+            </div>
+      </div>
+      </form>
+    </main>
+  </body>
+</html>

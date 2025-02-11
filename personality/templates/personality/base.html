@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{% block title %}{% endblock title %}</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
+    />
+    <style>
+      body {
+        display: grid;
+        place-content: center;
+        /* height: 100dvh;*/
+      }
+
+      header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 2%;
+        margin: 2% 0%;
+        height: 8vh;
+        width: 100vw;
+      }
+
+      section {
+        display: grid;
+        place-content: center;
+      }
+
+      .center {
+        display: flex;
+        justify-content: center;
+      }
+
+      a {
+        text-decoration: none;
+        color: black;
+        padding: 1% 2%;
+        background-color: #e5e5e5;
+        border-radius: 6px;
+      }
+
+      a:hover {
+        color: white;
+      }
+
+      h2,
+      h1 {
+        text-align: center;
+      }
+
+      form {
+        min-width: 400px;
+        width: 100%;
+        display: grid;
+        place-content: center;
+      }
+      textarea {
+        height: 80px;
+      }
+      input[type="submit"] {
+        max-width: 20vw;
+      }
+      main {
+        display: grid;
+        justify-content: center;
+      }
+      .row{
+        display: flex;
+        align-items: center;
+      }
+      button {
+        font-size: 0.8rem; /* Reduce button size */
+        padding: 5px 10px; /* Adjust button padding */
+      }
+      a.del {
+        color: white;
+        background-color: rgb(153, 13, 13);
+      }
+      a.del:hover{
+        background-color: rgb(184, 16, 16);
+      }
+    </style>
+    {% block extra_css %}{% endblock extra_css %}
+  </head>
+  <body>
+    <header>
+      <a href="{% url 'admin_dashboard'  %}">Dashboard</a>
+      <a href="{% url 'personality_dashboard'  %}">HOME</a>
+      <a href="{% url 'add_question' %}">ADD Questions</a>
+      <a href="{% url 'add_category' %}">ADD Category</a>
+    </header>
+    <main>{% block content %} {% endblock content %}</main>
+  </body>
+</html>

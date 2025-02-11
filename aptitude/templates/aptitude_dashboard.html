@@ -1,0 +1,58 @@
+{% extends './base.html' %} 
+{% block title %}Aptitude Dashboard{% endblock title%} 
+{% block extra_css %}
+<style>
+  table,tr {
+    width: 80vw;
+    text-align: center;
+    border-collapse: collapse;
+    max-width: 100%;
+  }
+
+  th,
+  td {
+    border: 1px solid white;
+    text-align: center;
+    padding: 1.4% 0%; /* Reduce padding */
+    white-space: nowrap; /* Prevent multi-line actions */
+  }
+
+  .actions {
+    width: 20vw;
+    display: flex;
+    gap: 8px; /* Add spacing between buttons */
+    justify-content: center;
+  }
+
+  button {
+    font-size: 0.8rem; /* Reduce button size */
+    padding: 5px 10px; /* Adjust button padding */
+  }
+  a.del{
+    color: white;
+    background-color: rgb(153, 13, 13)
+  }
+</style>
+{% endblock extra_css %} {% block content %}
+<h1>Aptitude DashBoard</h1>
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Question</th>
+    <th>Category</th>
+    <th>Actions</th>
+  </tr>
+  {% for question in questions %}
+  <tr>
+    <td>{{question.id}}</td>
+    <td>{{question.text|truncatewords:5}}</td>
+    <td>{{question.category.name}}</td>
+    <td >
+      <a href="{% url 'edit_aptitude' question.id %}">EDIT</a> 
+      &nbsp; | &nbsp;
+      <a href="{% url 'delete_aptitude' question.id  %}" class="del">DELETE</a>
+    </td>
+  </tr>
+  {% endfor %}
+</table>
+{% endblock content %}

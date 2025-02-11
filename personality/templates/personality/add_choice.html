@@ -1,0 +1,35 @@
+<!-- personality/templates/personality/add_choice.html -->
+{% extends './base.html' %}
+
+{% block content %}
+<div class="container mt-4">
+    <h1>Add Choice for: {{ question.text }}</h1>
+    
+    <!-- Display Existing Choices -->
+    <div class="mb-4">
+        <h3>Existing Choices:</h3>
+        {% if existing_choices %}
+            <ul class="list-group">
+                {% for choice in existing_choices %}
+                <li class="list-group-item">
+                    <div class="row">
+                        {{ choice.text }} (Score: {{ choice.score }}) -  &nbsp; <a class="del" href="{% url 'delete_choice' choice.id  %}"> 🗑️ </a>
+                    </div>
+                    <br>
+                </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>No choices added yet.</p>
+        {% endif %}
+    </div>
+
+    <!-- Add New Choice Form -->
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="center center-primary">Save Choice</button>
+        <a href="{% url 'personality_dashboard' %}" class="center del">Cancel</a>
+    </form>
+</div>
+{% endblock %}

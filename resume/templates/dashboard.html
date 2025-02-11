@@ -1,0 +1,65 @@
+{% extends "./resume/base.html" %} 
+{% block title %}Dashboard{% endblock title%}
+{% block extra_css %}
+<style>
+  table,tr {
+    width: 80vw;
+    text-align: center;
+    border-collapse: collapse;
+    max-width: 100%;
+  }
+
+  th,
+  td {
+    border: 1px solid white;
+    text-align: center;
+    padding: 1.4% 0%; /* Reduce padding */
+    white-space: nowrap; /* Prevent multi-line actions */
+  }
+
+  .actions {
+    width: 20vw;
+    display: flex;
+    gap: 8px; /* Add spacing between buttons */
+    justify-content: center;
+  }
+
+  button {
+    font-size: 0.8rem; /* Reduce button size */
+    padding: 5px 10px; /* Adjust button padding */
+  }
+  a.del{
+    color: white;
+    background-color: rgb(153, 13, 13)
+  }
+</style>
+{% endblock extra_css %} 
+{% block content %}
+<h1>Resume DashBoard</h1>
+<main>
+  <table>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Score</th>
+      <th>Title</th>
+      <th>UPLOADED</th>
+      <th>Actions</th>
+    </tr>
+    {% for job in jobs %}
+    <tr>
+      <td>{{job.test_taker_id}}</td>
+      <td>{{job.parsed_data.parsed.name}}</td>
+      <td>{{job.score|floatformat:2}}%</td>
+      <td>{{job.parsed_data.parsed.title}}</td>
+      <td>{{job.uploaded_at|date:"M d, Y"}}</td>
+      <td>
+        <a href="{% url 'resume_detail' resume_id=job.id %}">VIEW</a>
+        &nbsp;|&nbsp;
+        <a href="{% url 'delete_resume' id=job.id %}" class="del"> DELETE</a>
+      </td>
+    </tr>
+    {% endfor %}
+  </table>
+</main>
+{% endblock content %}
