@@ -5,11 +5,9 @@ An AI-powered **Applicant Tracking System** that automates **resume screening, c
 ---
 
 ## Features
-- ✅ **Resume Parsing & Scoring** – Extracts candidate details & assigns scores.  
-- ✅ **Personality & Aptitude Tests** – Evaluates candidates based on AI-driven assessments.  
+- ✅ **Resume Parsing & Scoring** – Extracts candidate details using AI & assigns scores.  
+- ✅ **Personality & Aptitude Tests** – Evaluates candidates based on assessments.  
 - ✅ **Overall Candidate Rating** – Generates an **aggregated score** for better hiring decisions.  
-- ✅ **Auto-Approve & Reject** – Filters candidates based on pre-defined criteria.  
-- ✅ **REST API Support** – Easily integrates with external HR tools.  
 
 ---
 
