@@ -1,7 +1,7 @@
 {
   "builds": [
     {
-      "src": "manage.py",
+      "src": "ats/wsgi.py",
       "use": "@vercel/python",
       "config": {
         "maxLambdaSize": "15mb",
