@@ -23,7 +23,7 @@ cd ats
 ## 2️⃣ Set Up a Virtual Environment
 ```bash
 python -m venv .venv
-venv\Scripts\activate  # Linux: source .venv/bin/activate
+source venv\Scripts\activate  # Linux: source .venv/bin/activate
 ```
 
 ## 3️⃣ Install Dependencies

@@ -1,0 +1,2766 @@
+﻿[
+{
+    "model": "admin_honeypot.loginattempt",
+    "pk": 1,
+    "fields": {
+        "username": "test",
+        "ip_address": "127.0.0.1",
+        "session_key": "suuh4b2j8ab2v7qf67115naefzr4njfv",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36",
+        "timestamp": "2025-02-11T07:14:44.402Z",
+        "path": "/admin/login/"
+    }
+},
+{
+    "model": "admin_honeypot.loginattempt",
+    "pk": 2,
+    "fields": {
+        "username": "ashvin",
+        "ip_address": "127.0.0.1",
+        "session_key": "vovd3eaedrj8wc8n548x6cidt6dcya9j",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36",
+        "timestamp": "2025-02-11T11:09:58.235Z",
+        "path": "/admin/login/"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "admin",
+        "model": "logentry"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "auth",
+        "model": "permission"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "auth",
+        "model": "group"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "auth",
+        "model": "user"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "contenttypes",
+        "model": "contenttype"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "sessions",
+        "model": "session"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "aptitude",
+        "model": "aptitudecategory"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "aptitude",
+        "model": "aptitudequestions"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "aptitude",
+        "model": "choice"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "aptitude",
+        "model": "aptituderesponse"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "home",
+        "model": "testtaker"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "personality",
+        "model": "category"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "personality",
+        "model": "choice"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "personality",
+        "model": "personalityresult"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "personality",
+        "model": "question"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "personality",
+        "model": "personalityuserresponse"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "resume",
+        "model": "job"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "resume",
+        "model": "resume"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "admin_honeypot",
+        "model": "loginattempt"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "vovd3eaedrj8wc8n548x6cidt6dcya9j",
+    "fields": {
+        "session_data": ".eJxVjssOgjAURP-layH0RXtduvcbSO-jghpIoKyM_y4kxOh2zszJvFSX1tJ36yJzN7A6K61Ovxkmesi4A76n8TbVNI1lHrDeK_VBl_o6sTwvR_dP0Kel39ak2UtsjGT0YLOzTrvUgmVwErMwQ2izI8AYWySDDQAHQB-N8cEFu0mLLKUr6fF9CiQ6N1wlY33lLEiFmGPVGgkYqSEyWr0_tItHvg:1thoBJ:PGkfrzH0YVUIMtUYWplyx1Yiz5hFh7b8resq1n4xghg",
+        "expire_date": "2025-02-25T11:11:57.769Z"
+    }
+},
+{
+    "model": "aptitude.aptitudecategory",
+    "pk": 1,
+    "fields": {
+        "name": "Logic"
+    }
+},
+{
+    "model": "aptitude.aptitudecategory",
+    "pk": 2,
+    "fields": {
+        "name": "Math"
+    }
+},
+{
+    "model": "aptitude.aptitudecategory",
+    "pk": 3,
+    "fields": {
+        "name": "English"
+    }
+},
+{
+    "model": "aptitude.aptitudecategory",
+    "pk": 4,
+    "fields": {
+        "name": "Coding"
+    }
+},
+{
+    "model": "aptitude.aptitudequestions",
+    "pk": 1,
+    "fields": {
+        "text": "If I slap you on the right side, where will you face go.",
+        "category": 1
+    }
+},
+{
+    "model": "aptitude.aptitudequestions",
+    "pk": 2,
+    "fields": {
+        "text": "2+2",
+        "category": 2
+    }
+},
+{
+    "model": "aptitude.aptitudequestions",
+    "pk": 3,
+    "fields": {
+        "text": "You are ___ monkey",
+        "category": 3
+    }
+},
+{
+    "model": "aptitude.aptitudequestions",
+    "pk": 24,
+    "fields": {
+        "text": "4+5",
+        "category": 2
+    }
+},
+{
+    "model": "aptitude.aptitudequestions",
+    "pk": 25,
+    "fields": {
+        "text": "Which is a valid keyword in java?",
+        "category": 4
+    }
+},
+{
+    "model": "aptitude.aptitudequestions",
+    "pk": 26,
+    "fields": {
+        "text": "for i in range(3):\r\n    print(i)\r\nin python",
+        "category": 4
+    }
+},
+{
+    "model": "aptitude.aptitudequestions",
+    "pk": 27,
+    "fields": {
+        "text": "In python \r\nwhich keyword is used to skip the rest of the code in the current iteration of a loop and move to the next iteration?",
+        "category": 4
+    }
+},
+{
+    "model": "aptitude.aptitudequestions",
+    "pk": 28,
+    "fields": {
+        "text": "Which loop in Python is used for iterating over a sequence until a specified condition is False?",
+        "category": 4
+    }
+},
+{
+    "model": "aptitude.aptitudequestions",
+    "pk": 30,
+    "fields": {
+        "text": "Which keyword is used to exit a loop and skip the remaining iterations?",
+        "category": 4
+    }
+},
+{
+    "model": "aptitude.aptitudequestions",
+    "pk": 31,
+    "fields": {
+        "text": "In a while loop, what will happen if the loop condition is initially False?",
+        "category": 4
+    }
+},
+{
+    "model": "aptitude.aptitudequestions",
+    "pk": 32,
+    "fields": {
+        "text": "In Python, what is the purpose of the else block in a while loop?",
+        "category": 4
+    }
+},
+{
+    "model": "aptitude.choice",
+    "pk": 1,
+    "fields": {
+        "question": 1,
+        "text": "left",
+        "is_correct": true
+    }
+},
+{
+    "model": "aptitude.choice",
+    "pk": 2,
+    "fields": {
+        "question": 1,
+        "text": "up",
+        "is_correct": false
+    }
+},
+{
+    "model": "aptitude.choice",
+    "pk": 3,
+    "fields": {
+        "question": 1,
+        "text": "down",
+        "is_correct": false
+    }
+},
+{
+    "model": "aptitude.choice",
+    "pk": 4,
+    "fields": {
+        "question": 1,
+        "text": "right",
+        "is_correct": false
+    }
+},
+{
+    "model": "aptitude.choice",
+    "pk": 5,
+    "fields": {
+        "question": 2,
+        "text": "2",
+        "is_correct": false
+    }
+},
+{
+    "model": "aptitude.choice",
+    "pk": 6,
+    "fields": {
+        "question": 2,
+        "text": "3",
+        "is_correct": false
+    }
+},
+{
+    "model": "aptitude.choice",
+    "pk": 7,
+    "fields": {
+        "question": 2,
+        "text": "4",
+        "is_correct": true
+    }
+},
+{
+    "model": "aptitude.choice",
+    "pk": 8,
+    "fields": {
+        "question": 2,
+        "text": "5",
+        "is_correct": false
+    }
+},
+{
+    "model": "aptitude.choice",
+    "pk": 9,
+    "fields": {
+        "question": 3,
+        "text": "a",
+        "is_correct": true
+    }
+},
+{
+    "model": "aptitude.choice",
+    "pk": 10,
+    "fields": {
+        "question": 3,
+        "text": "an",
+        "is_correct": false
+    }
+},
+{
+    "model": "aptitude.choice",
+    "pk": 11,
+    "fields": {
+        "question": 3,
+        "text": "am",
+        "is_correct": false
+    }
+},
+{
+    "model": "aptitude.choice",
+    "pk": 12,
+    "fields": {
+        "question": 3,
+        "text": "you",
+        "is_correct": false
+    }
+},
+{
+    "model": "aptitude.choice",
+    "pk": 81,
+    "fields": {
+        "question": 24,
+        "text": "10",
+        "is_correct": false
+    }
+},
+{
+    "model": "aptitude.choice",
+    "pk": 82,
+    "fields": {
+        "question": 24,
+        "text": "8",
+        "is_correct": false
+    }
+},
+{
+    "model": "aptitude.choice",
+    "pk": 83,
+    "fields": {
+        "question": 24,
+        "text": "9",
+        "is_correct": true
+    }
+},
+{
+    "model": "aptitude.choice",
+    "pk": 84,
+    "fields": {
+        "question": 24,
+        "text": "2",
+        "is_correct": false
+    }
+},
+{
+    "model": "aptitude.choice",
+    "pk": 85,
+    "fields": {
+        "question": 25,
+        "text": "interface",
+        "is_correct": true
+    }
+},
+{
+    "model": "aptitude.choice",
+    "pk": 86,
+    "fields": {
+        "question": 25,
+        "text": "string",
+        "is_correct": false
+    }
+},
+{
+    "model": "aptitude.choice",
+    "pk": 87,
+    "fields": {
+        "question": 25,
+        "text": "Float",
+        "is_correct": false
+    }
+},
+{
+    "model": "aptitude.choice",
+    "pk": 88,
+    "fields": {
+        "question": 25,
+        "text": "unsigned",
+        "is_correct": false
+    }
+},
+{
+    "model": "aptitude.choice",
+    "pk": 89,
+    "fields": {
+        "question": 26,
+        "text": "0",
+        "is_correct": false
+    }
+},
+{
+    "model": "aptitude.choice",
+    "pk": 90,
+    "fields": {
+        "question": 26,
+        "text": "1",
+        "is_correct": false
+    }
+},
+{
+    "model": "aptitude.choice",
+    "pk": 91,
+    "fields": {
+        "question": 26,
+        "text": "2",
+        "is_correct": false
+    }
+},
+{
+    "model": "aptitude.choice",
+    "pk": 92,
+    "fields": {
+        "question": 26,
+        "text": "0 1 2",
+        "is_correct": true
+    }
+},
+{
+    "model": "aptitude.choice",
+    "pk": 93,
+    "fields": {
+        "question": 27,
+        "text": "pass",
+        "is_correct": false
+    }
+},
+{
+    "model": "aptitude.choice",
+    "pk": 94,
+    "fields": {
+        "question": 27,
+        "text": "continue",
+        "is_correct": true
+    }
+},
+{
+    "model": "aptitude.choice",
+    "pk": 95,
+    "fields": {
+        "question": 27,
+        "text": "skip",
+        "is_correct": false
+    }
+},
+{
+    "model": "aptitude.choice",
+    "pk": 96,
+    "fields": {
+        "question": 27,
+        "text": "next",
+        "is_correct": false
+    }
+},
+{
+    "model": "aptitude.choice",
+    "pk": 97,
+    "fields": {
+        "question": 28,
+        "text": "for loop",
+        "is_correct": false
+    }
+},
+{
+    "model": "aptitude.choice",
+    "pk": 98,
+    "fields": {
+        "question": 28,
+        "text": "while loop",
+        "is_correct": true
+    }
+},
+{
+    "model": "aptitude.choice",
+    "pk": 99,
+    "fields": {
+        "question": 28,
+        "text": "do-while loop",
+        "is_correct": false
+    }
+},
+{
+    "model": "aptitude.choice",
+    "pk": 100,
+    "fields": {
+        "question": 28,
+        "text": "if loop",
+        "is_correct": false
+    }
+},
+{
+    "model": "aptitude.choice",
+    "pk": 104,
+    "fields": {
+        "question": 30,
+        "text": "terminate",
+        "is_correct": false
+    }
+},
+{
+    "model": "aptitude.choice",
+    "pk": 105,
+    "fields": {
+        "question": 30,
+        "text": "exit",
+        "is_correct": false
+    }
+},
+{
+    "model": "aptitude.choice",
+    "pk": 106,
+    "fields": {
+        "question": 30,
+        "text": "break",
+        "is_correct": true
+    }
+},
+{
+    "model": "aptitude.choice",
+    "pk": 107,
+    "fields": {
+        "question": 30,
+        "text": "skip",
+        "is_correct": false
+    }
+},
+{
+    "model": "aptitude.choice",
+    "pk": 108,
+    "fields": {
+        "question": 31,
+        "text": "The loop will run indefinitely.",
+        "is_correct": false
+    }
+},
+{
+    "model": "aptitude.choice",
+    "pk": 109,
+    "fields": {
+        "question": 31,
+        "text": "The loop will never execute.",
+        "is_correct": true
+    }
+},
+{
+    "model": "aptitude.choice",
+    "pk": 110,
+    "fields": {
+        "question": 31,
+        "text": "The loop will execute once.",
+        "is_correct": false
+    }
+},
+{
+    "model": "aptitude.choice",
+    "pk": 111,
+    "fields": {
+        "question": 31,
+        "text": "An error will occur.",
+        "is_correct": false
+    }
+},
+{
+    "model": "aptitude.choice",
+    "pk": 112,
+    "fields": {
+        "question": 32,
+        "text": "It is executed when the loop is terminated prematurely.",
+        "is_correct": false
+    }
+},
+{
+    "model": "aptitude.choice",
+    "pk": 113,
+    "fields": {
+        "question": 32,
+        "text": "It is executed only if an exception occurs in the loop.",
+        "is_correct": false
+    }
+},
+{
+    "model": "aptitude.choice",
+    "pk": 114,
+    "fields": {
+        "question": 32,
+        "text": "It is executed when the loop condition becomes False.",
+        "is_correct": true
+    }
+},
+{
+    "model": "aptitude.choice",
+    "pk": 115,
+    "fields": {
+        "question": 32,
+        "text": "It is executed when the loop condition is True.",
+        "is_correct": false
+    }
+},
+{
+    "model": "aptitude.aptituderesponse",
+    "pk": 1,
+    "fields": {
+        "test_taker": "8cc1b8a2-fb7d-45c3-acb6-fd5156754a75",
+        "score": 0,
+        "score_category": {},
+        "approved": false,
+        "created_at": "2025-02-10T10:57:42.990Z",
+        "selected_answer": [
+            1,
+            7,
+            9
+        ]
+    }
+},
+{
+    "model": "aptitude.aptituderesponse",
+    "pk": 2,
+    "fields": {
+        "test_taker": "be94d93c-b494-4495-b522-c4b404557981",
+        "score": 10,
+        "score_category": {
+            "Logic": 4,
+            "Math": 2,
+            "English": 4
+        },
+        "approved": false,
+        "created_at": "2025-02-10T17:24:51.277Z",
+        "selected_answer": [
+            1,
+            7,
+            9
+        ]
+    }
+},
+{
+    "model": "aptitude.aptituderesponse",
+    "pk": 3,
+    "fields": {
+        "test_taker": "209b84b6-f74b-474f-8af0-91a0aa8b10a3",
+        "score": 9,
+        "score_category": {
+            "Logic": 1,
+            "Math": 2,
+            "English": 1,
+            "Coding": 5
+        },
+        "approved": false,
+        "created_at": "2025-02-11T11:01:39.180Z",
+        "selected_answer": [
+            1,
+            7,
+            9,
+            83,
+            85,
+            92,
+            97,
+            106,
+            109,
+            114
+        ]
+    }
+},
+{
+    "model": "home.testtaker",
+    "pk": "19ce1f0d-a235-439e-bbf8-62e7b8c0cc21",
+    "fields": {
+        "approved": "pending",
+        "created_at": "2025-02-11T11:11:57.761Z"
+    }
+},
+{
+    "model": "home.testtaker",
+    "pk": "209b84b6-f74b-474f-8af0-91a0aa8b10a3",
+    "fields": {
+        "approved": "approved",
+        "created_at": "2025-02-11T10:53:33.381Z"
+    }
+},
+{
+    "model": "home.testtaker",
+    "pk": "8cc1b8a2-fb7d-45c3-acb6-fd5156754a75",
+    "fields": {
+        "approved": "approved",
+        "created_at": "2025-02-10T10:51:31.748Z"
+    }
+},
+{
+    "model": "home.testtaker",
+    "pk": "be94d93c-b494-4495-b522-c4b404557981",
+    "fields": {
+        "approved": "pending",
+        "created_at": "2025-02-10T17:24:15.054Z"
+    }
+},
+{
+    "model": "personality.category",
+    "pk": 1,
+    "fields": {
+        "name": "Openness"
+    }
+},
+{
+    "model": "personality.category",
+    "pk": 2,
+    "fields": {
+        "name": "Dedication"
+    }
+},
+{
+    "model": "personality.category",
+    "pk": 3,
+    "fields": {
+        "name": "Growth"
+    }
+},
+{
+    "model": "personality.category",
+    "pk": 4,
+    "fields": {
+        "name": "Time Management"
+    }
+},
+{
+    "model": "personality.question",
+    "pk": 1,
+    "fields": {
+        "text": "Are you open to work from 9AM",
+        "category": 1
+    }
+},
+{
+    "model": "personality.question",
+    "pk": 2,
+    "fields": {
+        "text": "Do you like your work",
+        "category": 2
+    }
+},
+{
+    "model": "personality.question",
+    "pk": 3,
+    "fields": {
+        "text": "If you notice a small mistake in a project that no one else has seen, what would you do?",
+        "category": 2
+    }
+},
+{
+    "model": "personality.question",
+    "pk": 4,
+    "fields": {
+        "text": "How do you handle receiving constructive criticism?",
+        "category": 3
+    }
+},
+{
+    "model": "personality.question",
+    "pk": 5,
+    "fields": {
+        "text": "YouÆre given a task outside your usual responsibilities. How do you react?",
+        "category": 3
+    }
+},
+{
+    "model": "personality.question",
+    "pk": 6,
+    "fields": {
+        "text": "How do you prioritize tasks when everything seems urgent?",
+        "category": 4
+    }
+},
+{
+    "model": "personality.question",
+    "pk": 7,
+    "fields": {
+        "text": "How do you approach working with a difficult coworker?",
+        "category": 1
+    }
+},
+{
+    "model": "personality.question",
+    "pk": 8,
+    "fields": {
+        "text": "If youÆre given a deadline that seems impossible, what do you do?If youÆre given a deadline that seems impossible, what do you do?",
+        "category": 2
+    }
+},
+{
+    "model": "personality.question",
+    "pk": 9,
+    "fields": {
+        "text": "YouÆve made a mistake at work. How do you handle it?",
+        "category": 2
+    }
+},
+{
+    "model": "personality.question",
+    "pk": 10,
+    "fields": {
+        "text": "How do you react when your ideas are rejected in a team discussion?",
+        "category": 1
+    }
+},
+{
+    "model": "personality.question",
+    "pk": 11,
+    "fields": {
+        "text": "What would you do if youÆre assigned a task you donÆt know how to do?",
+        "category": 3
+    }
+},
+{
+    "model": "personality.question",
+    "pk": 12,
+    "fields": {
+        "text": "How do you feel about working in a fast-paced environment?",
+        "category": 2
+    }
+},
+{
+    "model": "personality.choice",
+    "pk": 1,
+    "fields": {
+        "question": 1,
+        "text": "No",
+        "score": 0
+    }
+},
+{
+    "model": "personality.choice",
+    "pk": 2,
+    "fields": {
+        "question": 1,
+        "text": "Yes",
+        "score": 1
+    }
+},
+{
+    "model": "personality.choice",
+    "pk": 3,
+    "fields": {
+        "question": 1,
+        "text": "ofcourse",
+        "score": 2
+    }
+},
+{
+    "model": "personality.choice",
+    "pk": 4,
+    "fields": {
+        "question": 2,
+        "text": "yes",
+        "score": 1
+    }
+},
+{
+    "model": "personality.choice",
+    "pk": 5,
+    "fields": {
+        "question": 2,
+        "text": "no",
+        "score": 0
+    }
+},
+{
+    "model": "personality.choice",
+    "pk": 6,
+    "fields": {
+        "question": 3,
+        "text": "Ignore it, since itÆs minor and wonÆt affect the outcome.",
+        "score": 0
+    }
+},
+{
+    "model": "personality.choice",
+    "pk": 7,
+    "fields": {
+        "question": 3,
+        "text": "Fix it quietly and move on.",
+        "score": 1
+    }
+},
+{
+    "model": "personality.choice",
+    "pk": 8,
+    "fields": {
+        "question": 3,
+        "text": "Fix it and inform the team to prevent similar mistakes in the future.",
+        "score": 2
+    }
+},
+{
+    "model": "personality.choice",
+    "pk": 9,
+    "fields": {
+        "question": 4,
+        "text": "I take it personally and feel discouraged.",
+        "score": 0
+    }
+},
+{
+    "model": "personality.choice",
+    "pk": 10,
+    "fields": {
+        "question": 4,
+        "text": "I listen but donÆt always apply the feedback.",
+        "score": 1
+    }
+},
+{
+    "model": "personality.choice",
+    "pk": 11,
+    "fields": {
+        "question": 4,
+        "text": "I appreciate it, reflect on it, and use it to improve.",
+        "score": 2
+    }
+},
+{
+    "model": "personality.choice",
+    "pk": 12,
+    "fields": {
+        "question": 5,
+        "text": "I feel frustrated but do it anyway.",
+        "score": 0
+    }
+},
+{
+    "model": "personality.choice",
+    "pk": 13,
+    "fields": {
+        "question": 5,
+        "text": "I take it as a challenge and try my best.",
+        "score": 1
+    }
+},
+{
+    "model": "personality.choice",
+    "pk": 14,
+    "fields": {
+        "question": 5,
+        "text": "I embrace it as a learning opportunity and ask questions.",
+        "score": 2
+    }
+},
+{
+    "model": "personality.choice",
+    "pk": 15,
+    "fields": {
+        "question": 6,
+        "text": "I do whatever seems easiest first.",
+        "score": 0
+    }
+},
+{
+    "model": "personality.choice",
+    "pk": 16,
+    "fields": {
+        "question": 6,
+        "text": "I assess the impact of each task and tackle the most critical ones first.",
+        "score": 1
+    }
+},
+{
+    "model": "personality.choice",
+    "pk": 17,
+    "fields": {
+        "question": 6,
+        "text": "I communicate with my team/manager to align priorities effectively.",
+        "score": 2
+    }
+},
+{
+    "model": "personality.choice",
+    "pk": 18,
+    "fields": {
+        "question": 7,
+        "text": "I avoid them as much as possible.",
+        "score": 0
+    }
+},
+{
+    "model": "personality.choice",
+    "pk": 19,
+    "fields": {
+        "question": 7,
+        "text": "I stay professional but keep interactions minimal.",
+        "score": 1
+    }
+},
+{
+    "model": "personality.choice",
+    "pk": 20,
+    "fields": {
+        "question": 7,
+        "text": "I try to understand their perspective and find common ground.",
+        "score": 2
+    }
+},
+{
+    "model": "personality.choice",
+    "pk": 21,
+    "fields": {
+        "question": 8,
+        "text": "I stress out and hope for the best.",
+        "score": 0
+    }
+},
+{
+    "model": "personality.choice",
+    "pk": 22,
+    "fields": {
+        "question": 8,
+        "text": "I try my best and push through.",
+        "score": 1
+    }
+},
+{
+    "model": "personality.choice",
+    "pk": 23,
+    "fields": {
+        "question": 8,
+        "text": "I  communicate early, negotiate deadlines if needed, and break tasks into manageable steps.",
+        "score": 2
+    }
+},
+{
+    "model": "personality.choice",
+    "pk": 24,
+    "fields": {
+        "question": 9,
+        "text": "I try to cover it up and hope no one notices.",
+        "score": 0
+    }
+},
+{
+    "model": "personality.choice",
+    "pk": 25,
+    "fields": {
+        "question": 9,
+        "text": "I quietly fix it if I can.",
+        "score": 1
+    }
+},
+{
+    "model": "personality.choice",
+    "pk": 26,
+    "fields": {
+        "question": 9,
+        "text": "I acknowledge it, take responsibility, and find a solution.",
+        "score": 2
+    }
+},
+{
+    "model": "personality.choice",
+    "pk": 27,
+    "fields": {
+        "question": 10,
+        "text": "I feel upset and disengage from the discussion.",
+        "score": 0
+    }
+},
+{
+    "model": "personality.choice",
+    "pk": 28,
+    "fields": {
+        "question": 10,
+        "text": "I listen to the reasoning and try to contribute in other ways.",
+        "score": 1
+    }
+},
+{
+    "model": "personality.choice",
+    "pk": 29,
+    "fields": {
+        "question": 10,
+        "text": "I ask for feedback and find ways to refine my idea or support others.",
+        "score": 2
+    }
+},
+{
+    "model": "personality.choice",
+    "pk": 30,
+    "fields": {
+        "question": 11,
+        "text": "Panic and struggle through it alone.",
+        "score": 0
+    }
+},
+{
+    "model": "personality.choice",
+    "pk": 31,
+    "fields": {
+        "question": 11,
+        "text": "Try to figure it out through research.",
+        "score": 1
+    }
+},
+{
+    "model": "personality.choice",
+    "pk": 32,
+    "fields": {
+        "question": 11,
+        "text": "Ask for guidance and combine it with my own research.",
+        "score": 2
+    }
+},
+{
+    "model": "personality.choice",
+    "pk": 33,
+    "fields": {
+        "question": 12,
+        "text": "I prefer slow, predictable work and donÆt enjoy fast changes.",
+        "score": 0
+    }
+},
+{
+    "model": "personality.choice",
+    "pk": 34,
+    "fields": {
+        "question": 12,
+        "text": "I can manage it but need time to adjust.",
+        "score": 1
+    }
+},
+{
+    "model": "personality.choice",
+    "pk": 35,
+    "fields": {
+        "question": 12,
+        "text": "I thrive in dynamic environments and enjoy challenges",
+        "score": 2
+    }
+},
+{
+    "model": "personality.personalityuserresponse",
+    "pk": 1,
+    "fields": {
+        "test_taker": "8cc1b8a2-fb7d-45c3-acb6-fd5156754a75",
+        "question": 2,
+        "choice": 4,
+        "timestamp": "2025-02-10T10:57:32.491Z"
+    }
+},
+{
+    "model": "personality.personalityuserresponse",
+    "pk": 2,
+    "fields": {
+        "test_taker": "8cc1b8a2-fb7d-45c3-acb6-fd5156754a75",
+        "question": 1,
+        "choice": 3,
+        "timestamp": "2025-02-10T10:57:32.497Z"
+    }
+},
+{
+    "model": "personality.personalityuserresponse",
+    "pk": 3,
+    "fields": {
+        "test_taker": "be94d93c-b494-4495-b522-c4b404557981",
+        "question": 2,
+        "choice": 4,
+        "timestamp": "2025-02-10T17:24:33.083Z"
+    }
+},
+{
+    "model": "personality.personalityuserresponse",
+    "pk": 4,
+    "fields": {
+        "test_taker": "be94d93c-b494-4495-b522-c4b404557981",
+        "question": 1,
+        "choice": 3,
+        "timestamp": "2025-02-10T17:24:33.088Z"
+    }
+},
+{
+    "model": "personality.personalityuserresponse",
+    "pk": 5,
+    "fields": {
+        "test_taker": "209b84b6-f74b-474f-8af0-91a0aa8b10a3",
+        "question": 11,
+        "choice": 30,
+        "timestamp": "2025-02-11T11:00:11.568Z"
+    }
+},
+{
+    "model": "personality.personalityuserresponse",
+    "pk": 6,
+    "fields": {
+        "test_taker": "209b84b6-f74b-474f-8af0-91a0aa8b10a3",
+        "question": 4,
+        "choice": 10,
+        "timestamp": "2025-02-11T11:00:11.577Z"
+    }
+},
+{
+    "model": "personality.personalityuserresponse",
+    "pk": 7,
+    "fields": {
+        "test_taker": "209b84b6-f74b-474f-8af0-91a0aa8b10a3",
+        "question": 6,
+        "choice": 17,
+        "timestamp": "2025-02-11T11:00:11.585Z"
+    }
+},
+{
+    "model": "personality.personalityuserresponse",
+    "pk": 8,
+    "fields": {
+        "test_taker": "209b84b6-f74b-474f-8af0-91a0aa8b10a3",
+        "question": 2,
+        "choice": 4,
+        "timestamp": "2025-02-11T11:00:11.592Z"
+    }
+},
+{
+    "model": "personality.personalityuserresponse",
+    "pk": 9,
+    "fields": {
+        "test_taker": "209b84b6-f74b-474f-8af0-91a0aa8b10a3",
+        "question": 7,
+        "choice": 18,
+        "timestamp": "2025-02-11T11:00:11.600Z"
+    }
+},
+{
+    "model": "personality.personalityuserresponse",
+    "pk": 10,
+    "fields": {
+        "test_taker": "209b84b6-f74b-474f-8af0-91a0aa8b10a3",
+        "question": 3,
+        "choice": 7,
+        "timestamp": "2025-02-11T11:00:11.608Z"
+    }
+},
+{
+    "model": "personality.personalityuserresponse",
+    "pk": 11,
+    "fields": {
+        "test_taker": "209b84b6-f74b-474f-8af0-91a0aa8b10a3",
+        "question": 8,
+        "choice": 23,
+        "timestamp": "2025-02-11T11:00:11.615Z"
+    }
+},
+{
+    "model": "personality.personalityuserresponse",
+    "pk": 12,
+    "fields": {
+        "test_taker": "209b84b6-f74b-474f-8af0-91a0aa8b10a3",
+        "question": 5,
+        "choice": 14,
+        "timestamp": "2025-02-11T11:00:11.623Z"
+    }
+},
+{
+    "model": "personality.personalityresult",
+    "pk": 1,
+    "fields": {
+        "test_taker": "8cc1b8a2-fb7d-45c3-acb6-fd5156754a75",
+        "scores": {
+            "Openness": 2.0,
+            "Dedication": 1.0
+        },
+        "total_score": 3.0,
+        "approved": false,
+        "created_at": "2025-02-10T10:57:32.507Z"
+    }
+},
+{
+    "model": "personality.personalityresult",
+    "pk": 2,
+    "fields": {
+        "test_taker": "be94d93c-b494-4495-b522-c4b404557981",
+        "scores": {
+            "Openness": 2.0,
+            "Dedication": 1.0
+        },
+        "total_score": 3.0,
+        "approved": false,
+        "created_at": "2025-02-10T17:24:33.098Z"
+    }
+},
+{
+    "model": "personality.personalityresult",
+    "pk": 3,
+    "fields": {
+        "test_taker": "209b84b6-f74b-474f-8af0-91a0aa8b10a3",
+        "scores": {
+            "Openness": 0.0,
+            "Dedication": 1.33,
+            "Growth": 1.0,
+            "Time Management": 2.0
+        },
+        "total_score": 4.33,
+        "approved": false,
+        "created_at": "2025-02-11T11:00:11.654Z"
+    }
+},
+{
+    "model": "resume.job",
+    "pk": 1,
+    "fields": {
+        "title": "Junior Flutter Developer",
+        "required_skills": [
+            "Flutter",
+            "Firebase",
+            "api",
+            "git",
+            "dart",
+            "figma",
+            "bloc"
+        ],
+        "required_education": [
+            "bca",
+            "b.c.a",
+            "bachelor of computer applications"
+        ],
+        "required_experience_years": 1,
+        "is_active": true,
+        "created_at": "2025-02-10T10:52:37.634Z"
+    }
+},
+{
+    "model": "resume.job",
+    "pk": 2,
+    "fields": {
+        "title": "Junior Django Developer",
+        "required_skills": [
+            "django",
+            "python",
+            "figma",
+            "sql",
+            "db",
+            "sqlite",
+            "git",
+            "github",
+            "html",
+            "css",
+            "js"
+        ],
+        "required_education": [
+            "mca",
+            "m.c.a",
+            "master of computer applications"
+        ],
+        "required_experience_years": 1,
+        "is_active": true,
+        "created_at": "2025-02-11T10:55:32.650Z"
+    }
+},
+{
+    "model": "resume.resume",
+    "pk": 1,
+    "fields": {
+        "test_taker": "8cc1b8a2-fb7d-45c3-acb6-fd5156754a75",
+        "job": 1,
+        "file": "resumes/Ashvin_Resume.pdf",
+        "parsed_data": {
+            "parsed": {
+                "name": "Ashvin Santhosh",
+                "title": "Software Developer",
+                "brief": "Since I was 17, IÆve been into programmingùcreating and sharing apps and websites, solving problems, and learning through coding and IT support. always looking to expand my knowledge and skills.",
+                "contact": {
+                    "location_city": null,
+                    "location_country": null,
+                    "email": "ashvin.per@gmail.com",
+                    "phone": "+91-7034780539",
+                    "linkedin": "LinkedIn",
+                    "github": null,
+                    "twitter": null,
+                    "website": "Portfolio"
+                },
+                "employment_history": [
+                    {
+                        "title": "Software Developer",
+                        "company": "MashUpTech",
+                        "company_website": null,
+                        "location": "Info Park, Kochi",
+                        "start_date": "2024-04-01",
+                        "end_date": null,
+                        "responsibilities": [
+                            "Developed 5+ mobile applications using Flutter, increasing app functionality and user engagement by 30%.",
+                            "Designed and implemented database solutions for 2+ projects, optimizing data storage and retrieval performance by 25%.",
+                            "Deployed and documented Django program deployment on VPS, configuring remote MySQL access.",
+                            "Created UI/UX designs for both web and mobile platforms.",
+                            "Mentored 5 interns, resolving technical challenges and improving their productivity by 70%.",
+                            "Participated in 3+ client meetings, gathering requirements and offering technical recommendations that enhanced product outcomes.",
+                            "Managed 2 intern-led projects, setting up Jira tickets, designing databases, and delegating tasks effectively to ensure project completion on schedule.",
+                            "Provided technical support to colleagues, solving 90% of troubleshooting issues within the first interaction, boosting overall team efficiency",
+                            "Delivered 2+ workshops on Flutter and app creation across local colleges, helping students gain hands-on experience and practical insights into industry practices",
+                            "Edited Instagram reels to enhance the company's reach and engagement on the platform by 10%."
+                        ]
+                    },
+                    {
+                        "title": "Freelance Video Editor",
+                        "company": "Behance",
+                        "company_website": null,
+                        "location": "",
+                        "start_date": "2020-01-01",
+                        "end_date": "2021-12-31",
+                        "responsibilities": [
+                            "Produced and edited high-quality videos for various clients, ensuring timely delivery across different platforms. Successfully handled multiple projects simultaneously, demonstrating strong multitasking skills.",
+                            "Communicated effectively with 20+ diverse clients, tailoring video content to meet their specific needs, which resulted in repeat business from 80% of clients."
+                        ]
+                    }
+                ],
+                "education": [
+                    {
+                        "degree": "B.C.A",
+                        "institution_name": "B.V.M HOLY CROSS COLLEGE CHERPUNKAL",
+                        "institution_country": null,
+                        "start_date": null,
+                        "end_date": "2024-01-01"
+                    },
+                    {
+                        "degree": "12th BioIP",
+                        "institution_name": "B.M.M SCHOOL CBSE, PAMPADY",
+                        "institution_country": null,
+                        "start_date": null,
+                        "end_date": "2020-01-01"
+                    },
+                    {
+                        "degree": "10th CBSE",
+                        "institution_name": "B.M.M SCHOOL CBSE, PAMPADY",
+                        "institution_country": null,
+                        "start_date": null,
+                        "end_date": "2019-01-01"
+                    }
+                ],
+                "skills": [
+                    "Adaptability",
+                    "Critical thinking",
+                    "Digital literacy",
+                    "Life-long learning",
+                    "Problem solving",
+                    "Growth mindset",
+                    "HTML",
+                    "CSS",
+                    "JavaScript",
+                    "jQuery",
+                    "Bootstrap",
+                    "Pico CSS",
+                    "Tailwind",
+                    "WordPress",
+                    "Laravel",
+                    "React.js",
+                    "Flutter",
+                    "PHP",
+                    "C",
+                    "C++",
+                    "Firebase",
+                    "MySQL",
+                    "Vercel",
+                    "Hostinger",
+                    "Github",
+                    "Github Desktop",
+                    "FileZilla",
+                    "MySQL Workbench",
+                    "Figma",
+                    "Canva",
+                    "dbdiagram.io",
+                    "Spline",
+                    "Premier Pro",
+                    "Lightroom"
+                ],
+                "courses": [
+                    "Flutter Internship at MashupTech",
+                    "State Level Software Project Contest 2 prize Technotica",
+                    "Website Design Bootcamp Kodacy"
+                ],
+                "languages": [],
+                "references": [],
+                "derived": {
+                    "years_of_experience": 5,
+                    "approximate_age": 20
+                }
+            },
+            "normalized_text": "ASHVIN SANTHOSH  \nPhone: +91-7034780539  \nEmail: ashvin.per@gmail.com  \nPortfolio: [Provide Link]  \nLinkedIn: [Provide Link]  \n\nABOUT ME  \nSince I was 17, IÆve been into programmingùcreating and sharing apps and websites, solving problems, and learning through coding and IT support. Always looking to expand my knowledge and skills.\n\nEXPERIENCE  \n- Software Developer at MashUpTech, Info Park, Kochi  \n  April 2024 - Present  \n  - Developed 5+ mobile applications using Flutter, increasing app functionality and user engagement by 30%.  \n  - Designed and implemented database solutions for 2+ projects, optimizing data storage and retrieval performance by 25%.  \n  - Deployed and documented Django program deployment on VPS, configuring remote MySQL access.  \n  - Created UI/UX designs for both web and mobile platforms.  \n  - Mentored 5 interns, resolving technical challenges and improving their productivity by 70%.  \n  - Participated in 3+ client meetings, gathering requirements and offering technical recommendations that enhanced product outcomes.  \n  - Managed 2 intern-led projects, setting up Jira tickets, designing databases, and delegating tasks effectively to ensure project completion on schedule.  \n  - Provided technical support to colleagues, solving 90% of troubleshooting issues within the first interaction, boosting overall team efficiency.  \n  - Delivered 2+ workshops on Flutter and app creation across local colleges, helping students gain hands-on experience and practical insights into industry practices.  \n  - Edited Instagram reels to enhance the company's reach and engagement on the platform by 10%.\n\n- Freelance Video Editor at Behance  \n  2020 ù 2021  \n  - Produced and edited high-quality videos for various clients, ensuring timely delivery across different platforms. Successfully handled multiple projects simultaneously, demonstrating strong multitasking skills.  \n  - Communicated effectively with 20+ diverse clients, tailoring video content to meet their specific needs, which resulted in repeat business from 80% of clients.\n\nEDUCATION  \n- UG: B.C.A from B.V.M Holy Cross College, Cherpunkal, 2024  \n- 12th BioIP from B.M.M School CBSE, Pampady, 2020  \n- CBSE 10th from B.M.M School CBSE, Pampady, 2019\n\nCERTIFICATIONS  \n- 2-month Flutter Internship at MashUpTech, 2024  \n- State Level Software Project Contest 2nd Prize, Technotica, 2023  \n- Website Design Bootcamp, Kodacy, 2023  \n\nPROJECTS  \n- Inakal  \n  2024  \n  - Acted as a Project Manager by creating SRS, setting up Jira tickets, designing databases, and delegating tasks efficiently to team members. Deployed the Django app to Hostinger VPS.  \n\n- Powerstone  \n  2023  \n  - Developed gym management application that streamlined operational processes, enhanced member engagement through user-friendly features, and addressed the top three pain points of gym owners for improved satisfaction levels. [Flutter & Firebase]  \n\n- OGS  \n  2023  \n  - Developed a web-based Online Grievance Redressal System using HTML, CSS, JavaScript, PHP, and MySQL. This web-based platform empowers users to share grievances seamlessly.\n\nSKILLS  \n- Soft Skills: Adaptability, Critical Thinking, Digital Literacy, Life-long Learning, Problem Solving, Growth Mindset  \n- Web Development: HTML, CSS, JavaScript, jQuery, Bootstrap, Pico CSS, Tailwind, WordPress  \n- Frameworks & Libraries & Languages: Laravel, React.js, Flutter, PHP, C, C++, Firebase, MySQL  \n- Deployment & Hosting & Version Control: Vercel, Hostinger, Github, GitHub Desktop, FileZilla, MySQL Workbench  \n- Design & Prototyping: Figma, Canva, dbdiagram.io, Spline, Premiere Pro, Lightroom",
+            "file_metadata": {
+                "Title": "Ashvin Santhosh - Resume.docx",
+                "Author": "Ashvin",
+                "Creator": "Microsoft« Word for Microsoft 365",
+                "CreationDate": "D:20250101150931+05'30'",
+                "ModDate": "D:20250101150931+05'30'",
+                "Producer": "Microsoft« Word for Microsoft 365"
+            },
+            "meta": {
+                "message": "Resume parsed successfully.",
+                "file_hash": "22467e9f60af1542c8477ace02132037",
+                "runtime_ms": 92.448552
+            }
+        },
+        "score": 71.42857142857143,
+        "score_breakdown": {
+            "skills": {
+                "matched": [
+                    "flutter",
+                    "firebase",
+                    "figma"
+                ],
+                "score": 42.857142857142854
+            },
+            "education": {
+                "matched": true,
+                "score": 100
+            },
+            "experience": {
+                "years": 1,
+                "score": 100.0
+            },
+            "penalties": [],
+            "total": 71.42857142857143
+        },
+        "uploaded_at": "2025-02-10T10:57:22.665Z"
+    }
+},
+{
+    "model": "resume.resume",
+    "pk": 2,
+    "fields": {
+        "test_taker": "be94d93c-b494-4495-b522-c4b404557981",
+        "job": 1,
+        "file": "resumes/Ashvin_Santhosh.pdf",
+        "parsed_data": {
+            "parsed": {
+                "name": "Ashvin Santhosh",
+                "title": "Software Developer",
+                "brief": "A dedicated and solution-oriented software developer with extensive experience in mobile and web application development, specializing in Flutter and Django. Skilled in designing and implementing scalable and efficient solutions that enhance user experience and system performance. Adept at collaborating with cross-functional teams, mentoring junior developers, and delivering high-quality applications. Driven by a strong problem-solving mindset, continuously exploring emerging technologies to improve development efficiency. Committed to knowledge sharing, having conducted workshops and guided interns in building industry-ready applications.",
+                "contact": {
+                    "location_city": "Kochi",
+                    "location_country": "India",
+                    "email": "ashvin.per@gmail.com",
+                    "phone": "(91) - 7034780539",
+                    "linkedin": null,
+                    "github": null,
+                    "twitter": null,
+                    "website": "www.ashvinportfolio.vercel.app"
+                },
+                "employment_history": [
+                    {
+                        "title": "Software Developer",
+                        "company": "MashUpTech",
+                        "company_website": null,
+                        "location": "Infopark Kochi, India",
+                        "start_date": "2024-04-01",
+                        "end_date": null,
+                        "roles": [
+                            {
+                                "role": "Software Developer",
+                                "responsibilities": [
+                                    "Developed 3+ mobile applications using Flutter, increasing app functionality and user engagement by 30%.",
+                                    "Designed and implemented database solutions for 2+ projects, optimizing data storage and retrieval performance by 25%.",
+                                    "Deployed and documented Django program deployment on VPS, configuring remote MySQL access.",
+                                    "Created UI/UX designs for both web and mobile platforms.",
+                                    "Mentored 5 interns, resolving technical challenges and improving their productivity by 70%.",
+                                    "Participated in 3+ client meetings, gathering requirements and offering technical recommendations that enhanced product outcomes.",
+                                    "Managed 2 intern-led projects, setting up Jira tickets, designing databases, and delegating tasks effectively to ensure project completion on schedule.",
+                                    "Provided technical support to colleagues, solving 90% of troubleshooting issues within the first interaction, boosting overall team efficiency.",
+                                    "Delivered 2+ workshops on Flutter and app creation across local colleges, helping students gain hands-on experience and practical insights into industry practices.",
+                                    "Edited Instagram reels to enhance the company's reach and engagement on the platform by 10%."
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Freelance Video Editor",
+                        "company": "Freelance",
+                        "company_website": null,
+                        "location": "Remote",
+                        "start_date": "2020-01-01",
+                        "end_date": "2021-12-31",
+                        "roles": [
+                            {
+                                "role": "Video Editor",
+                                "responsibilities": [
+                                    "Produced and edited high-quality videos for various clients, ensuring timely delivery across different platforms.",
+                                    "Communicated effectively with 20+ diverse clients, tailoring video content to meet their specific needs, which resulted in repeat business from 80% of clients."
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "education": [
+                    {
+                        "degree": "Bachelors of Computer Application",
+                        "institution_name": "Mahatma Gandhi University",
+                        "institution_country": "India",
+                        "start_date": "2021-01-01",
+                        "end_date": "2024-12-31"
+                    }
+                ],
+                "skills": [
+                    "Flutter",
+                    "Django",
+                    "HTML",
+                    "CSS",
+                    "JavaScript",
+                    "HTMX",
+                    "Bootstrap",
+                    "Pico CSS",
+                    "Tailwind",
+                    "WordPress",
+                    "PHP",
+                    "Firebase",
+                    "MySQL",
+                    "SQLite",
+                    "Vercel",
+                    "Hostinger",
+                    "Github",
+                    "Github Desktop",
+                    "FileZilla",
+                    "MySQL Workbench",
+                    "Figma",
+                    "Canva",
+                    "dbdiagram.io",
+                    "Premier Pro",
+                    "Lightroom"
+                ],
+                "courses": [],
+                "languages": [],
+                "references": [],
+                "derived": {
+                    "years_of_experience": 4.0,
+                    "approximate_age": 0
+                }
+            },
+            "normalized_text": "ASHVIN SANTHOSH  \nKochi, Kerala, IN  \n(91) - 7034780539  \nashvin.per@gmail.com  \nwww.ashvinportfolio.vercel.app  \n\nSOFTWARE DEVELOPER\n\nPROFILE  \nA dedicated and solution-oriented software developer with extensive experience in mobile and web application development, specializing in Flutter and Django. Skilled in designing and implementing scalable and efficient solutions that enhance user experience and system performance. Adept at collaborating with cross-functional teams, mentoring junior developers, and delivering high-quality applications. Driven by a strong problem-solving mindset, continuously exploring emerging technologies to improve development efficiency. Committed to knowledge sharing, having conducted workshops and guided interns in building industry-ready applications.\n\nSOFT SKILLS\n- Project Management\n- Adaptability\n- Teamwork\n- Critical Thinking\n- Digital literacy\n- Life-long learning\n- Problem solving\n- Growth mindset\n\nWORK EXPERIENCE\n\nApril 2024 - Present  \nMashUpTech Infopark Kochi  \nSoftware Developer  \n- Developed 3+ mobile applications using Flutter, increasing app functionality and user engagement by 30%.\n- Designed and implemented database solutions for 2+ projects, optimizing data storage and retrieval performance by 25%.\n- Deployed and documented Django program deployment on VPS, configuring remote MySQL access.\n- Created UI/UX designs for both web and mobile platforms.\n- Mentored 5 interns, resolving technical challenges and improving their productivity by 70%.\n- Participated in 3+ client meetings, gathering requirements and offering technical recommendations that enhanced product outcomes.\n- Managed 2 intern-led projects, setting up Jira tickets, designing databases, and delegating tasks effectively to ensure project completion on schedule.\n- Provided technical support to colleagues, solving 90% of troubleshooting issues within the first interaction, boosting overall team efficiency.\n- Delivered 2+ workshops on Flutter and app creation across local colleges, helping students gain hands-on experience and practical insights into industry practices.\n- Edited Instagram reels to enhance the company's reach and engagement on the platform by 10%.\n\n2020 - 2021  \nFreelance Video Editor  \n- Produced and edited high-quality videos for various clients, ensuring timely delivery across different platforms. Successfully handled multiple projects simultaneously, demonstrating strong multitasking skills.\n- Communicated effectively with 20+ diverse clients, tailoring video content to meet their specific needs, which resulted in repeat business from 80% of clients.\n\nPROJECTS\n\n2024  \nInakal (Matrimonial Web Application)  \n- Acted as a Project Manager by creating SRS, setting up Jira tickets, designing databases, and delegating tasks efficiently to team members. Deployed the Django app to Hostinger VPS. [Configuring the Server, Setting up the Database, Configuring Open LiteSpeed Server, Configuring Networking with Django].\n\n2024  \nETC (LMS Based Mobile Application)  \n- Developed a modern LMS app in Flutter with a sleek Figma-designed UI. Integrated Pinput for OTP, Lottie animations for smooth transitions, and a video player for seamless content delivery, creating an engaging and user-friendly learning experience. [Flutter & Figma] + [Pinput, Video Player, Lottie Animations]\n\n2023  \nPowerstone (Gym Mobile Application)  \n- Developed a cutting-edge gym management application that streamlined operational processes, enhanced member engagement through user-friendly features, and addressed the top three pain points of gym owners for improved satisfaction levels. [Flutter & Firebase] + [Video Player, Notifications, Real-time Chat + Razor Pay Payment Integration]\n\nEDUCATION\n\nBachelors of Computer Application - 8.01 GPA  \n2021-2024  \nMahatma Gandhi University, Kottayam  \n- B.C.A focuses on computer science, software development, and IT fundamentals. It provides a strong foundation in programming, systems management, and software development.\n\nHARD SKILLS\n\n- Web Development: HTML, CSS, JavaScript, HTMX, Bootstrap, Pico CSS, Tailwind, WordPress\n- Frameworks & Libraries & Languages: Flutter, PHP, Django, Firebase, MySQL, SQLite\n- Deployment & Tools: Vercel, Hostinger, GitHub, GitHub Desktop, FileZilla, MySQL Workbench\n- Design & Prototyping: Figma, Canva, dbdiagram.io, Premiere Pro, Lightroom",
+            "file_metadata": {
+                "Title": "Ashvin Santhosh",
+                "Creator": "Canva",
+                "Producer": "Canva",
+                "CreationDate": "D:20250129160327+00'00'",
+                "ModDate": "D:20250129160327+00'00'",
+                "Keywords": "DAGdlZEqG9U,BAFgtSwaCy0,0",
+                "Author": "Ashvin Santhosh"
+            },
+            "meta": {
+                "message": "Resume parsed successfully.",
+                "file_hash": "5feb89cc26cecdebd1a680892b46e3c2",
+                "runtime_ms": 45.509595
+            }
+        },
+        "score": 41.42857142857143,
+        "score_breakdown": {
+            "skills": {
+                "matched": [
+                    "flutter",
+                    "firebase",
+                    "figma"
+                ],
+                "score": 42.857142857142854
+            },
+            "education": {
+                "matched": false,
+                "score": 0
+            },
+            "experience": {
+                "years": 1,
+                "score": 100.0
+            },
+            "penalties": [],
+            "total": 41.42857142857143
+        },
+        "uploaded_at": "2025-02-10T17:24:25.541Z"
+    }
+},
+{
+    "model": "resume.resume",
+    "pk": 4,
+    "fields": {
+        "test_taker": "209b84b6-f74b-474f-8af0-91a0aa8b10a3",
+        "job": 2,
+        "file": "resumes/Ashvin_Resume_UwVI9nv.pdf",
+        "parsed_data": {
+            "parsed": {
+                "name": "Ashvin Santhosh",
+                "title": "Software Developer",
+                "brief": "Since I was 17, IÆve been into programmingùcreating and sharing apps and websites, solving problems, and learning through coding and IT support. always looking to expand my knowledge and skills.",
+                "contact": {
+                    "location_city": null,
+                    "location_country": null,
+                    "email": "ashvin.per@gmail.com",
+                    "phone": "+91-7034780539",
+                    "linkedin": "LinkedIn",
+                    "github": null,
+                    "twitter": null,
+                    "website": "Portfolio"
+                },
+                "employment_history": [
+                    {
+                        "title": "Software Developer",
+                        "company": "MashUpTech",
+                        "company_website": null,
+                        "location": "Info Park, Kochi",
+                        "start_date": "2024-04-01",
+                        "end_date": null,
+                        "responsibilities": [
+                            "Developed 5+ mobile applications using Flutter, increasing app functionality and user engagement by 30%.",
+                            "Designed and implemented database solutions for 2+ projects, optimizing data storage and retrieval performance by 25%.",
+                            "Deployed and documented Django program deployment on VPS, configuring remote MySQL access.",
+                            "Created UI/UX designs for both web and mobile platforms.",
+                            "Mentored 5 interns, resolving technical challenges and improving their productivity by 70%.",
+                            "Participated in 3+ client meetings, gathering requirements and offering technical recommendations that enhanced product outcomes.",
+                            "Managed 2 intern-led projects, setting up Jira tickets, designing databases, and delegating tasks effectively to ensure project completion on schedule.",
+                            "Provided technical support to colleagues, solving 90% of troubleshooting issues within the first interaction, boosting overall team efficiency",
+                            "Delivered 2+ workshops on Flutter and app creation across local colleges, helping students gain hands-on experience and practical insights into industry practices",
+                            "Edited Instagram reels to enhance the company's reach and engagement on the platform by 10%."
+                        ]
+                    },
+                    {
+                        "title": "Freelance Video Editor",
+                        "company": "Behance",
+                        "company_website": null,
+                        "location": "",
+                        "start_date": "2020-01-01",
+                        "end_date": "2021-12-31",
+                        "responsibilities": [
+                            "Produced and edited high-quality videos for various clients, ensuring timely delivery across different platforms. Successfully handled multiple projects simultaneously, demonstrating strong multitasking skills.",
+                            "Communicated effectively with 20+ diverse clients, tailoring video content to meet their specific needs, which resulted in repeat business from 80% of clients."
+                        ]
+                    }
+                ],
+                "education": [
+                    {
+                        "degree": "B.C.A",
+                        "institution_name": "B.V.M HOLY CROSS COLLEGE CHERPUNKAL",
+                        "institution_country": null,
+                        "start_date": null,
+                        "end_date": "2024-01-01"
+                    },
+                    {
+                        "degree": "12th BioIP",
+                        "institution_name": "B.M.M SCHOOL CBSE, PAMPADY",
+                        "institution_country": null,
+                        "start_date": null,
+                        "end_date": "2020-01-01"
+                    },
+                    {
+                        "degree": "10th CBSE",
+                        "institution_name": "B.M.M SCHOOL CBSE, PAMPADY",
+                        "institution_country": null,
+                        "start_date": null,
+                        "end_date": "2019-01-01"
+                    }
+                ],
+                "skills": [
+                    "Adaptability",
+                    "Critical thinking",
+                    "Digital literacy",
+                    "Life-long learning",
+                    "Problem solving",
+                    "Growth mindset",
+                    "HTML",
+                    "CSS",
+                    "JavaScript",
+                    "jQuery",
+                    "Bootstrap",
+                    "Pico CSS",
+                    "Tailwind",
+                    "WordPress",
+                    "Laravel",
+                    "React.js",
+                    "Flutter",
+                    "PHP",
+                    "C",
+                    "C++",
+                    "Firebase",
+                    "MySQL",
+                    "Vercel",
+                    "Hostinger",
+                    "Github",
+                    "Github Desktop",
+                    "FileZilla",
+                    "MySQL Workbench",
+                    "Figma",
+                    "Canva",
+                    "dbdiagram.io",
+                    "Spline",
+                    "Premier Pro",
+                    "Lightroom"
+                ],
+                "courses": [
+                    "Flutter Internship at MashupTech",
+                    "State Level Software Project Contest 2 prize Technotica",
+                    "Website Design Bootcamp Kodacy"
+                ],
+                "languages": [],
+                "references": [],
+                "derived": {
+                    "years_of_experience": 5,
+                    "approximate_age": 20
+                }
+            },
+            "normalized_text": "ASHVIN SANTHOSH  \nPhone: +91-7034780539  \nEmail: ashvin.per@gmail.com  \nPortfolio: [Provide Link]  \nLinkedIn: [Provide Link]  \n\nABOUT ME  \nSince I was 17, IÆve been into programmingùcreating and sharing apps and websites, solving problems, and learning through coding and IT support. Always looking to expand my knowledge and skills.\n\nEXPERIENCE  \n- Software Developer at MashUpTech, Info Park, Kochi  \n  April 2024 - Present  \n  - Developed 5+ mobile applications using Flutter, increasing app functionality and user engagement by 30%.  \n  - Designed and implemented database solutions for 2+ projects, optimizing data storage and retrieval performance by 25%.  \n  - Deployed and documented Django program deployment on VPS, configuring remote MySQL access.  \n  - Created UI/UX designs for both web and mobile platforms.  \n  - Mentored 5 interns, resolving technical challenges and improving their productivity by 70%.  \n  - Participated in 3+ client meetings, gathering requirements and offering technical recommendations that enhanced product outcomes.  \n  - Managed 2 intern-led projects, setting up Jira tickets, designing databases, and delegating tasks effectively to ensure project completion on schedule.  \n  - Provided technical support to colleagues, solving 90% of troubleshooting issues within the first interaction, boosting overall team efficiency.  \n  - Delivered 2+ workshops on Flutter and app creation across local colleges, helping students gain hands-on experience and practical insights into industry practices.  \n  - Edited Instagram reels to enhance the company's reach and engagement on the platform by 10%.\n\n- Freelance Video Editor at Behance  \n  2020 ù 2021  \n  - Produced and edited high-quality videos for various clients, ensuring timely delivery across different platforms. Successfully handled multiple projects simultaneously, demonstrating strong multitasking skills.  \n  - Communicated effectively with 20+ diverse clients, tailoring video content to meet their specific needs, which resulted in repeat business from 80% of clients.\n\nEDUCATION  \n- UG: B.C.A from B.V.M Holy Cross College, Cherpunkal, 2024  \n- 12th BioIP from B.M.M School CBSE, Pampady, 2020  \n- CBSE 10th from B.M.M School CBSE, Pampady, 2019\n\nCERTIFICATIONS  \n- 2-month Flutter Internship at MashUpTech, 2024  \n- State Level Software Project Contest 2nd Prize, Technotica, 2023  \n- Website Design Bootcamp, Kodacy, 2023  \n\nPROJECTS  \n- Inakal  \n  2024  \n  - Acted as a Project Manager by creating SRS, setting up Jira tickets, designing databases, and delegating tasks efficiently to team members. Deployed the Django app to Hostinger VPS.  \n\n- Powerstone  \n  2023  \n  - Developed gym management application that streamlined operational processes, enhanced member engagement through user-friendly features, and addressed the top three pain points of gym owners for improved satisfaction levels. [Flutter & Firebase]  \n\n- OGS  \n  2023  \n  - Developed a web-based Online Grievance Redressal System using HTML, CSS, JavaScript, PHP, and MySQL. This web-based platform empowers users to share grievances seamlessly.\n\nSKILLS  \n- Soft Skills: Adaptability, Critical Thinking, Digital Literacy, Life-long Learning, Problem Solving, Growth Mindset  \n- Web Development: HTML, CSS, JavaScript, jQuery, Bootstrap, Pico CSS, Tailwind, WordPress  \n- Frameworks & Libraries & Languages: Laravel, React.js, Flutter, PHP, C, C++, Firebase, MySQL  \n- Deployment & Hosting & Version Control: Vercel, Hostinger, Github, GitHub Desktop, FileZilla, MySQL Workbench  \n- Design & Prototyping: Figma, Canva, dbdiagram.io, Spline, Premiere Pro, Lightroom",
+            "file_metadata": {
+                "Title": "Ashvin Santhosh - Resume.docx",
+                "Author": "Ashvin",
+                "Creator": "Microsoft« Word for Microsoft 365",
+                "CreationDate": "D:20250101150931+05'30'",
+                "ModDate": "D:20250101150931+05'30'",
+                "Producer": "Microsoft« Word for Microsoft 365"
+            },
+            "meta": {
+                "message": "Resume parsed successfully.",
+                "file_hash": "22467e9f60af1542c8477ace02132037",
+                "runtime_ms": 30.382552999999998
+            }
+        },
+        "score": 38.18181818181819,
+        "score_breakdown": {
+            "skills": {
+                "matched": [
+                    "html",
+                    "figma",
+                    "css",
+                    "github"
+                ],
+                "score": 36.36363636363637
+            },
+            "education": {
+                "matched": false,
+                "score": 0
+            },
+            "experience": {
+                "years": 1,
+                "score": 100.0
+            },
+            "penalties": [],
+            "total": 38.18181818181819
+        },
+        "uploaded_at": "2025-02-11T10:58:47.876Z"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add log entry",
+        "content_type": [
+            "admin",
+            "logentry"
+        ],
+        "codename": "add_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change log entry",
+        "content_type": [
+            "admin",
+            "logentry"
+        ],
+        "codename": "change_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete log entry",
+        "content_type": [
+            "admin",
+            "logentry"
+        ],
+        "codename": "delete_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view log entry",
+        "content_type": [
+            "admin",
+            "logentry"
+        ],
+        "codename": "view_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add permission",
+        "content_type": [
+            "auth",
+            "permission"
+        ],
+        "codename": "add_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change permission",
+        "content_type": [
+            "auth",
+            "permission"
+        ],
+        "codename": "change_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete permission",
+        "content_type": [
+            "auth",
+            "permission"
+        ],
+        "codename": "delete_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view permission",
+        "content_type": [
+            "auth",
+            "permission"
+        ],
+        "codename": "view_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add group",
+        "content_type": [
+            "auth",
+            "group"
+        ],
+        "codename": "add_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change group",
+        "content_type": [
+            "auth",
+            "group"
+        ],
+        "codename": "change_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete group",
+        "content_type": [
+            "auth",
+            "group"
+        ],
+        "codename": "delete_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view group",
+        "content_type": [
+            "auth",
+            "group"
+        ],
+        "codename": "view_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add user",
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "codename": "add_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change user",
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "codename": "change_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete user",
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "codename": "delete_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view user",
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "codename": "view_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add content type",
+        "content_type": [
+            "contenttypes",
+            "contenttype"
+        ],
+        "codename": "add_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change content type",
+        "content_type": [
+            "contenttypes",
+            "contenttype"
+        ],
+        "codename": "change_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete content type",
+        "content_type": [
+            "contenttypes",
+            "contenttype"
+        ],
+        "codename": "delete_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view content type",
+        "content_type": [
+            "contenttypes",
+            "contenttype"
+        ],
+        "codename": "view_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add session",
+        "content_type": [
+            "sessions",
+            "session"
+        ],
+        "codename": "add_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change session",
+        "content_type": [
+            "sessions",
+            "session"
+        ],
+        "codename": "change_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete session",
+        "content_type": [
+            "sessions",
+            "session"
+        ],
+        "codename": "delete_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view session",
+        "content_type": [
+            "sessions",
+            "session"
+        ],
+        "codename": "view_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add aptitude category",
+        "content_type": [
+            "aptitude",
+            "aptitudecategory"
+        ],
+        "codename": "add_aptitudecategory"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change aptitude category",
+        "content_type": [
+            "aptitude",
+            "aptitudecategory"
+        ],
+        "codename": "change_aptitudecategory"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete aptitude category",
+        "content_type": [
+            "aptitude",
+            "aptitudecategory"
+        ],
+        "codename": "delete_aptitudecategory"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view aptitude category",
+        "content_type": [
+            "aptitude",
+            "aptitudecategory"
+        ],
+        "codename": "view_aptitudecategory"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add aptitude questions",
+        "content_type": [
+            "aptitude",
+            "aptitudequestions"
+        ],
+        "codename": "add_aptitudequestions"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change aptitude questions",
+        "content_type": [
+            "aptitude",
+            "aptitudequestions"
+        ],
+        "codename": "change_aptitudequestions"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete aptitude questions",
+        "content_type": [
+            "aptitude",
+            "aptitudequestions"
+        ],
+        "codename": "delete_aptitudequestions"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view aptitude questions",
+        "content_type": [
+            "aptitude",
+            "aptitudequestions"
+        ],
+        "codename": "view_aptitudequestions"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add choice",
+        "content_type": [
+            "aptitude",
+            "choice"
+        ],
+        "codename": "add_choice"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change choice",
+        "content_type": [
+            "aptitude",
+            "choice"
+        ],
+        "codename": "change_choice"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete choice",
+        "content_type": [
+            "aptitude",
+            "choice"
+        ],
+        "codename": "delete_choice"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view choice",
+        "content_type": [
+            "aptitude",
+            "choice"
+        ],
+        "codename": "view_choice"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add aptitude response",
+        "content_type": [
+            "aptitude",
+            "aptituderesponse"
+        ],
+        "codename": "add_aptituderesponse"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change aptitude response",
+        "content_type": [
+            "aptitude",
+            "aptituderesponse"
+        ],
+        "codename": "change_aptituderesponse"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete aptitude response",
+        "content_type": [
+            "aptitude",
+            "aptituderesponse"
+        ],
+        "codename": "delete_aptituderesponse"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view aptitude response",
+        "content_type": [
+            "aptitude",
+            "aptituderesponse"
+        ],
+        "codename": "view_aptituderesponse"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add test taker",
+        "content_type": [
+            "home",
+            "testtaker"
+        ],
+        "codename": "add_testtaker"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change test taker",
+        "content_type": [
+            "home",
+            "testtaker"
+        ],
+        "codename": "change_testtaker"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete test taker",
+        "content_type": [
+            "home",
+            "testtaker"
+        ],
+        "codename": "delete_testtaker"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view test taker",
+        "content_type": [
+            "home",
+            "testtaker"
+        ],
+        "codename": "view_testtaker"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add category",
+        "content_type": [
+            "personality",
+            "category"
+        ],
+        "codename": "add_category"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change category",
+        "content_type": [
+            "personality",
+            "category"
+        ],
+        "codename": "change_category"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete category",
+        "content_type": [
+            "personality",
+            "category"
+        ],
+        "codename": "delete_category"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view category",
+        "content_type": [
+            "personality",
+            "category"
+        ],
+        "codename": "view_category"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add choice",
+        "content_type": [
+            "personality",
+            "choice"
+        ],
+        "codename": "add_choice"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change choice",
+        "content_type": [
+            "personality",
+            "choice"
+        ],
+        "codename": "change_choice"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete choice",
+        "content_type": [
+            "personality",
+            "choice"
+        ],
+        "codename": "delete_choice"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view choice",
+        "content_type": [
+            "personality",
+            "choice"
+        ],
+        "codename": "view_choice"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add personality result",
+        "content_type": [
+            "personality",
+            "personalityresult"
+        ],
+        "codename": "add_personalityresult"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change personality result",
+        "content_type": [
+            "personality",
+            "personalityresult"
+        ],
+        "codename": "change_personalityresult"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete personality result",
+        "content_type": [
+            "personality",
+            "personalityresult"
+        ],
+        "codename": "delete_personalityresult"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view personality result",
+        "content_type": [
+            "personality",
+            "personalityresult"
+        ],
+        "codename": "view_personalityresult"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add question",
+        "content_type": [
+            "personality",
+            "question"
+        ],
+        "codename": "add_question"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change question",
+        "content_type": [
+            "personality",
+            "question"
+        ],
+        "codename": "change_question"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete question",
+        "content_type": [
+            "personality",
+            "question"
+        ],
+        "codename": "delete_question"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view question",
+        "content_type": [
+            "personality",
+            "question"
+        ],
+        "codename": "view_question"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add personality user response",
+        "content_type": [
+            "personality",
+            "personalityuserresponse"
+        ],
+        "codename": "add_personalityuserresponse"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change personality user response",
+        "content_type": [
+            "personality",
+            "personalityuserresponse"
+        ],
+        "codename": "change_personalityuserresponse"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete personality user response",
+        "content_type": [
+            "personality",
+            "personalityuserresponse"
+        ],
+        "codename": "delete_personalityuserresponse"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view personality user response",
+        "content_type": [
+            "personality",
+            "personalityuserresponse"
+        ],
+        "codename": "view_personalityuserresponse"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add job",
+        "content_type": [
+            "resume",
+            "job"
+        ],
+        "codename": "add_job"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change job",
+        "content_type": [
+            "resume",
+            "job"
+        ],
+        "codename": "change_job"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete job",
+        "content_type": [
+            "resume",
+            "job"
+        ],
+        "codename": "delete_job"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view job",
+        "content_type": [
+            "resume",
+            "job"
+        ],
+        "codename": "view_job"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add resume",
+        "content_type": [
+            "resume",
+            "resume"
+        ],
+        "codename": "add_resume"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change resume",
+        "content_type": [
+            "resume",
+            "resume"
+        ],
+        "codename": "change_resume"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete resume",
+        "content_type": [
+            "resume",
+            "resume"
+        ],
+        "codename": "delete_resume"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view resume",
+        "content_type": [
+            "resume",
+            "resume"
+        ],
+        "codename": "view_resume"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add login attempt",
+        "content_type": [
+            "admin_honeypot",
+            "loginattempt"
+        ],
+        "codename": "add_loginattempt"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change login attempt",
+        "content_type": [
+            "admin_honeypot",
+            "loginattempt"
+        ],
+        "codename": "change_loginattempt"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete login attempt",
+        "content_type": [
+            "admin_honeypot",
+            "loginattempt"
+        ],
+        "codename": "delete_loginattempt"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view login attempt",
+        "content_type": [
+            "admin_honeypot",
+            "loginattempt"
+        ],
+        "codename": "view_loginattempt"
+    }
+},
+{
+    "model": "auth.user",
+    "fields": {
+        "password": "pbkdf2_sha256$870000$RTBPFooPhR0YyLCt9qFMmg$FypmlRwavf+MgeZQceipTuftRerkPkyrQMCHYKsG5uw=",
+        "last_login": "2025-02-11T11:04:33.306Z",
+        "is_superuser": true,
+        "username": "ashvin",
+        "first_name": "",
+        "last_name": "",
+        "email": "ashvin@mail.com",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-02-10T20:10:50.172Z",
+        "groups": [],
+        "user_permissions": []
+    }
+}
+]
