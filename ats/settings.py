@@ -159,7 +159,7 @@ STATIC_URL = 'static/'
 # STATIC_DIRS = [os.path.join(BASE_DIR,'static')]
 # STATIC_ROOT= [os.path.join(BASE_DIR,'staticfiles')]
 
-LOGIN_REDIRECT_URL = "/admin_dashboard/"  # Redirect after login, unless a next is specified
+LOGIN_REDIRECT_URL = "/accounts/dashboard/"  # Redirect after login, unless a next is specified
 LOGOUT_REDIRECT_URL = "/login/"  # Redirect after logout
 
 # Default primary key field type
