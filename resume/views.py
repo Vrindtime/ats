@@ -6,11 +6,28 @@ from .utils import calculate_score
 from home.models import TestTaker
 import requests
 from django.contrib.auth.decorators import login_required
-from environ import Env
+import environ, os
+from pathlib import Path
+
+# Build paths inside the project like this: BASE_DIR / 'subdir'.
+BASE_DIR = Path(__file__).resolve().parent.parent
+
+# Initialize `environ`
+env = environ.Env()
+
+# Load .env file
+env.read_env(os.path.join(BASE_DIR, ".env"))  # Load .env from project root
 
 def upload_resume(request):
     test_taker_id = request.session.get('test_taker_id')
     test_taker = TestTaker.objects.get(id=test_taker_id)
+
+    # Fetch API from .env
+    api_key = env('RESUME_PARSER_API_KEY')
+    print(f"Bearer {api_key}")
+    if not api_key:
+        raise ValueError("RESUME_PARSER_API_KEY environment variable is not set")
+
     if request.method == 'POST':
         try:
             job_id = request.POST.get('job_id')
@@ -24,15 +41,14 @@ def upload_resume(request):
             resume.test_taker = test_taker
             resume.job = job  # Assign the job to resume
 
+
+
             # API Call
             try:
-                env = Env()
-                Env.read_env()
-                api_key = env('RESUME_PARSER_API_KEY')
                 files = {"file": resume.file.open()}
                 response = requests.post(
                     "https://resumeparser.app/resume/parse",
-                    headers={"Authorization": api_key},
+                    headers = {"Authorization": f"Bearer {api_key}"},
                     files=files
                 )
                 response.raise_for_status()  # Raise error for bad status

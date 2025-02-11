@@ -124,9 +124,11 @@
             <td>{{ test_taker.personality_score|default:0 }}</td>
             <td>{{ test_taker.aptitude_score|default:0 }}</td>
             <td>
-                <a href="{% url 'resume_detail' resume_id=test_taker.resume_id %}">View</a> &nbsp; | &nbsp;
-                <a href="{% url 'delete_user' id=test_taker.id %}" class="del">Delete</a>
-              </td>
+                {% if test_taker.resume_id %}
+                  <a href="{% url 'resume_detail' resume_id=test_taker.resume_id %}">View</a> &nbsp; | &nbsp;
+                  <a href="{% url 'delete_user' id=test_taker.id %}" class="del">Delete</a>
+                {% endif %}
+            </td>
            </tr>
            {% endfor %}
         </tbody>
