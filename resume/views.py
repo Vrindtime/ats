@@ -17,7 +17,6 @@ env = environ.Env()
 
 # Load .env file
 env.read_env(os.path.join(BASE_DIR, ".env"))  # Load .env from project root
-
 def upload_resume(request):
     test_taker_id = request.session.get('test_taker_id')
     test_taker = TestTaker.objects.get(id=test_taker_id)
@@ -31,38 +30,39 @@ def upload_resume(request):
 
         form = ResumeForm(request.POST, request.FILES)
         if form.is_valid():
-            resume = form.save(commit=False)  # Don't save yet
-
             # Get API Key from .env
             api_key = env('RESUME_PARSER_API_KEY')
             if not api_key:
                 raise ValueError("RESUME_PARSER_API_KEY environment variable is not set")
 
-            # Read file in memory (no saving!)
-            resume_file = request.FILES['file'].read()
+            # Read file from request (in-memory, NO saving!)
+            uploaded_file = request.FILES['file']
+            file_data = uploaded_file.read()
 
-            # API Call
+            # Send file to API
             try:
                 response = requests.post(
                     "https://resumeparser.app/resume/parse",
                     headers={"Authorization": f"Bearer {api_key}"},
-                    files={"file": ("resume.pdf", resume_file, "application/pdf")}
+                    files={"file": (uploaded_file.name, file_data, uploaded_file.content_type)}
                 )
                 response.raise_for_status()  # Raise error for bad status
             except requests.RequestException as e:
                 form.add_error(None, f"API Error: {str(e)}")
                 return render(request, 'resume/upload_resume.html', {'form': form})
 
-            # Parse and save data
+            # Process API response
             parsed_data = response.json()
-            resume.parsed_data = parsed_data
 
-            # Calculate score
-            resume.score_breakdown = calculate_score(job, parsed_data)
-            resume.score = resume.score_breakdown['total']
-            resume.test_taker = test_taker
-            resume.job = job  # Assign job to resume
-            resume.save()  # Now save it in the database
+            # Create Resume instance without saving file
+            resume = Resume(
+                test_taker=test_taker,
+                job=job,
+                parsed_data=parsed_data,
+                score_breakdown=calculate_score(job, parsed_data),
+                score=calculate_score(job, parsed_data)['total'],
+            )
+            resume.save()  # Save only metadata
 
             return redirect('personality_test')
 

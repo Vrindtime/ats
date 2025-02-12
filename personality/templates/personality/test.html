@@ -1,6 +1,94 @@
 <!-- personality/templates/personality/test.html -->
-{% extends './base.html' %}
-{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personality Test</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
+    />
+    <style>
+        body {
+        display: grid;
+        place-content: center;
+        /* height: 100dvh;*/
+      }
+
+      header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 2%;
+        margin: 2% 0%;
+        height: 8vh;
+        width: 100vw;
+      }
+
+      section {
+        display: grid;
+        place-content: center;
+      }
+
+      .center {
+        display: flex;
+        justify-content: center;
+      }
+
+      a {
+        text-decoration: none;
+        color: black;
+        padding: 1% 2%;
+        background-color: #c22323;
+        border-radius: 6px;
+      }
+
+      a:hover {
+        color: white;
+      }
+
+      h2,
+      h1 {
+        text-align: center;
+      }
+
+      form {
+        min-width: 400px;
+        width: 100%;
+        display: grid;
+        place-content: center;
+      }
+      textarea {
+        height: 80px;
+      }
+      input[type="submit"] {
+        max-width: 20vw;
+      }
+      main {
+        display: grid;
+        justify-content: center;
+      }
+      .row{
+        display: flex;
+        align-items: center;
+      }
+      button {
+        font-size: 0.8rem; /* Reduce button size */
+        padding: 5px 10px; /* Adjust button padding */
+      }
+      a.del {
+        color: white;
+        background-color: rgb(153, 13, 13);
+      }
+      a.del:hover{
+        background-color: rgb(184, 16, 16);
+      }
+    </style>
+</head>
+<body>
+<br><br>
 <!--  to clear the cache-->
 <a href="{% url 'clear_cache' %}" class="center center-warning">Clear Cache</a>
 <p>Session Value TEST: {{ test_taker_id }}</p>
@@ -36,4 +124,5 @@
         <button type="submit">Submit Test</button>
     </div>
 </form>
-{% endblock %}
+</body>
+</html>
