@@ -22,34 +22,31 @@ def upload_resume(request):
     test_taker_id = request.session.get('test_taker_id')
     test_taker = TestTaker.objects.get(id=test_taker_id)
 
-    # Fetch API from .env
-    api_key = env('RESUME_PARSER_API_KEY')
-    print(f"Bearer {api_key}")
-    if not api_key:
-        raise ValueError("RESUME_PARSER_API_KEY environment variable is not set")
-
     if request.method == 'POST':
         try:
             job_id = request.POST.get('job_id')
             job = Job.objects.get(id=job_id)
         except Job.DoesNotExist:
-            return render(request, 'resume/upload_resume.html',{'form': ResumeForm(), 'error': 'Invalid job selected'})
+            return render(request, 'resume/upload_resume.html', {'form': ResumeForm(), 'error': 'Invalid job selected'})
 
         form = ResumeForm(request.POST, request.FILES)
         if form.is_valid():
             resume = form.save(commit=False)  # Don't save yet
-            resume.test_taker = test_taker
-            resume.job = job  # Assign the job to resume
 
+            # Get API Key from .env
+            api_key = env('RESUME_PARSER_API_KEY')
+            if not api_key:
+                raise ValueError("RESUME_PARSER_API_KEY environment variable is not set")
 
+            # Read file in memory (no saving!)
+            resume_file = request.FILES['file'].read()
 
             # API Call
             try:
-                files = {"file": resume.file.open()}
                 response = requests.post(
                     "https://resumeparser.app/resume/parse",
-                    headers = {"Authorization": f"Bearer {api_key}"},
-                    files=files
+                    headers={"Authorization": f"Bearer {api_key}"},
+                    files={"file": ("resume.pdf", resume_file, "application/pdf")}
                 )
                 response.raise_for_status()  # Raise error for bad status
             except requests.RequestException as e:
@@ -63,17 +60,18 @@ def upload_resume(request):
             # Calculate score
             resume.score_breakdown = calculate_score(job, parsed_data)
             resume.score = resume.score_breakdown['total']
-            resume.save()
+            resume.test_taker = test_taker
+            resume.job = job  # Assign job to resume
+            resume.save()  # Now save it in the database
 
             return redirect('personality_test')
-    else:
-        # GET request - show form with active jobs
-        # test_taker_id = session.get('')
-        active_jobs = Job.objects.filter(is_active=True)
-        form = ResumeForm()
-    test_taker_id = request.session.get('test_taker_id','Null')
 
-    context={
+    # GET request - show form with active jobs
+    active_jobs = Job.objects.filter(is_active=True)
+    form = ResumeForm()
+    test_taker_id = request.session.get('test_taker_id', 'Null')
+
+    context = {
         'test_taker_id': test_taker_id,
         'form': form,
         'active_jobs': active_jobs,  # Pass jobs to template
