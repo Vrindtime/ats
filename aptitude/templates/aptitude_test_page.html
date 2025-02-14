@@ -1,27 +1,108 @@
-{% extends './base.html' %}
-{% block title %}Aptitude Test{% endblock title %}
-{% block content %}
-<h1>Aptitude Test</h1>
-<form action="{% url 'submit_test' %}" method="POST">
-    {% csrf_token %}
-    {% for question in questions %}
-        <div style="margin-bottom: 20px;">
-            <h3>Q{{ forloop.counter }}: {{ question.text }}</h3>
-            <ul style="list-style-type: none; padding-left: 0;">
-                {% for choice in question.choices.all %}
-                    
-                    <input type="radio" 
-                           name="question_{{ question.id }}" 
-                           value="{{ choice.id }}" 
-                           id="choice_{{ choice.id }}">
-                    <label for="choice_{{ choice.id }}">{{ choice.text }}</label>
-                    
-                {% endfor %}
-            </ul>
-        </div>
-    {% endfor %}
-    <button type="submit" style="background-color: #4CAF50; color: white; padding: 10px 20px; border: none; cursor: pointer;">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aptitude Test</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
+    />
+    <style>
+      body {
+        display: grid;
+        place-content: center;
+      }
+
+      header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 2%;
+        margin: 2% 0%;
+        height: 8vh;
+        width: 100vw;
+      }
+
+      a {
+        text-decoration: none;
+        color: white;
+        padding: 1% 2%;
+        background-color: #b12222;
+        border-radius: 6px;
+      }
+      a:hover {
+        color: black;
+        background-color: #de2e2e;
+      }
+      section {
+        display: grid;
+        place-content: center;
+      }
+      
+      .center {
+        display: flex;
+        justify-content: center;
+      }
+      h2,
+      h1 {
+        text-align: center;
+      }
+      form {
+        min-width: 400px;
+        width: 100%;
+        display: grid;
+        place-content: center;
+      }
+      textarea {
+        height: 80px;
+      }
+      input[type="submit"] {
+        max-width: 20vw;
+      }
+      main {
+        display: grid;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <br><br>
+    <!--  to clear the cache-->
+    <a href="{% url 'clear_cache' %}" class="center center-warning">Clear Cache</a>
+    <br>
+    <h1>Aptitude Test</h1>
+    <form action="{% url 'submit_test' %}" method="POST">
+      {% csrf_token %} {% for question in questions %}
+      <div style="margin-bottom: 20px">
+        <h3>Q{{ forloop.counter }}: {{ question.text }}</h3>
+        <ul style="list-style-type: none; padding-left: 0">
+          {% for choice in question.choices.all %}
+
+          <input
+            type="radio"
+            name="question_{{ question.id }}"
+            value="{{ choice.id }}"
+            id="choice_{{ choice.id }}"
+          />
+          <label for="choice_{{ choice.id }}">{{ choice.text }}</label>
+
+          {% endfor %}
+        </ul>
+      </div>
+      {% endfor %}
+      <button
+        type="submit"
+        style="
+          background-color: #4caf50;
+          color: white;
+          padding: 10px 20px;
+          border: none;
+          cursor: pointer;
+        "
+      >
         Submit Test
-    </button>
-</form>
-{% endblock content %}
+      </button>
+    </form>
+  </body>
+</html>
